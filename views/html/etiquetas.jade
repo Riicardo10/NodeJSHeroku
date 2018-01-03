@@ -1,0 +1,105 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Etiquetas basicas.
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-5
+			table.table.table-striped.table-hover
+				tr
+					th Etiqueta
+					th Descripcion
+				tr
+					td < DOCTYPE>
+					td Indica al navegador el tipo de documento.
+				tr
+					td < html >
+					td Define el inicio del documento HTML.
+				tr
+					td < head >
+					td Define la cabecera del documento HTML. Contiene información que no es visible para el usuario como título de la página, vinculaciones de archivos CSS o JS, la definición del código de caracteres.					
+				tr
+					td < style >
+					td Define el estilo interno del documento HTML usando CSS
+				tr 
+					td < link >
+					td Vincula hojas de estilo CSS.
+				tr
+					td < script >
+					td Vincula archivo escrito en JavaScript.
+				tr
+					td < title >
+					td Define el título de la página web.
+				tr
+					td < body >
+					td Define el contenido principal del documento HTML. Parte del documento HTML que se muestra en el navegador.
+				tr
+					td < article >
+					td Representa una composición auto contenida en un documento.
+				tr
+					td < h1 > - < h6 >
+					td Encabezado.
+				tr 
+					td < table >
+					td Define una tabla.
+				tr
+					td < tr >
+					td Define una fila en una tabla.
+		div.col-5
+			table.table.table-striped.table-hover
+				tr
+					th Etiqueta
+					th Descripcion
+				tr
+					td < td >
+					td Define una celda en una tabla.
+				tr
+					td < footer >
+					td Representa el pie de un documento.
+				tr 
+					td < a >
+					td Representa un vínculo. 
+				tr
+					td < div >
+					td Contenedor de página.
+				tr 
+					td < img >
+					td Representa una imagen. Requiere el atributo ‘src’ para indicar la ruta de la imagen a mostrar.
+				tr
+					td < ol > / < ul >
+					td Define una lista
+				tr
+					td < li >
+					td Elemento de lista.
+
+				tr
+					td < b >
+					td Define un texto en negrita.
+				tr
+					td < i >
+					td Define un texto en cursiva.
+				tr
+					td < del >
+					td Define un texto tachado.
+				tr
+					td < u >
+					td Define un texto subrayado.
+
+				tr
+					td < span >
+					td Diferencia un texto de otro.
+				tr
+					td < p >
+					td Define un párrafo de texto.
+				tr
+					td < address >
+					td Define la información de un contacto, autor o dirección.
+				tr
+					td < br >
+					td Incluye un salto de línea.
+				

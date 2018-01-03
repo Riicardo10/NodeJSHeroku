@@ -1,0 +1,27 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Metodos de envio de formularios.
+			p Cuando un usuario rellena un formulario en una página web, los datos se envían a un manejador para procesarlos. La manera de enviar los datos de un formulario se especifica en el atributo ‘method’ del form, en el cual se asigna el método HTTP que será usado cuando los datos de un formulario sean enviados.
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-5
+			h3 Metodo GET
+			ul
+				li Es el método predeterminado para enviar los datos de un formulario.
+				li Los datos enviados son visibles en la URL de la página.
+				li Se usa para mandar información con datos cortos o no confidenciales.
+				li No debe usarse cuando la información a enviar de un formulario es importante o confidencial.
+				li Obtiene información del servidor.
+		div.col-5
+			h3 Metodo POST
+			ul								
+				li Se usa para mandar información importante o confidencial.
+				li Los datos enviados no son visibles en la URL de la página.
+				li Envía información al servidor.
+				li Se usa para mandar información de un formulario.

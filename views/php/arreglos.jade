@@ -1,0 +1,42 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Arreglos.
+			p Un arreglo es un tipo especial de dato, el cual contiene múltiples valores. En otras palabras, es una lista que almacena sus valores en ítems, los cuales son posiciones de la lista, empezando desde la posición 0.
+			p Declaración de un arreglo en PHP.
+			b $nombre_arreglo = array()
+			p Para la inserción de elementos a un arreglo en PHP se utiliza la función array_push(ARREGLO,VARIABLE).
+			p Para obtener los elementos de un arreglo en PHP, se puede mediante los índices del elemento, se coloca el arreglo y la posición a la que se desea acceder entre corchetes, por ejemplo, el índice 0 corresponde al primer elemento, el índice 1 corresponde al segundo elemento... Otra manera de acceder es recorriendo todos los elementos del arreglo mediante un ciclo for.
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-10
+			h3 Funciones de los arreglos
+			table.table.table-striped.table-hover
+				tr
+					th Funcion
+					th Descripcion
+				tr
+					td array_pop
+					td Extrae el último elemento del final del array
+				tr
+					td array_push
+					td Inserta uno o más elementos al final de un array
+				tr
+					td array_rand
+					td Seleccionar una o más entradas aleatorias de un array
+				tr
+					td array_reverse
+					td Devuelve un array con los elementos en orden inverso
+				tr
+					td count
+					td Cuenta todos los elementos de un array o algo de un objeto
+				tr
+					td sort
+					td Ordena un array
+			br
+			a(href="http://php.net/manual/es/language.types.array.php") Documentacion oficial de PHP / Arreglos

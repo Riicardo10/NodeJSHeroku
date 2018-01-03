@@ -1,0 +1,29 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:0%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Concepto.
+			p Según Finley, 2013; Node.js es un entorno de ejecución multiplataforma para JavaScript, usado en la capa del servidor. Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos, que lo hace liviano y eficiente. El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías de código abierto en el mundo. Node.js está diseñado para construir aplicaciones en red escalables. (Finley, 2013)
+			center
+				img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="500")
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+		div.col-10
+			h3 Caracteristicas
+			ul
+				li Es un marco de servidor de código abierto.
+				li Es gratis.
+				li Se ejecuta en varias plataformas (Windows, Linux, Unix, Mac OS X, etc.).
+				li Usa JavaScript en el servidor.
+			h3 Usos comunes de Node.js
+			ul
+				li Generar contenido de página dinámico.
+				li Crear, abrir, leer, escribir, eliminar y cerrar archivos en el servidor.
+				li Recopilar datos de formulario.
+				li Agregar, eliminar, modificar datos en su base de datos.
+				li Aplicaciones basadas en API’s JSON.
+			p Un archivo de Node.js tiene la extensión de JavaScript (*.js) y en este archivo están contenidas las tareas que se ejecutaran en ciertos eventos (generalmente un evento es cuando alguien trata de acceder al puerto del servidor).

@@ -1,0 +1,141 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Tipos de datos.
+			p Las variables en PHP, a pesar de no asignarle un tipo de dato. Los tipos de datos que pueden tener las variables son: 
+	div.row(style="margin-bottom:1%;")
+		div.col-3
+		div.col-6
+			table.table.table-striped.table-hover
+				tr
+					th Tipo
+					th Ejemplo
+				tr
+					td Strings
+					td “Cadena”
+				tr
+					td Integer
+					td 133
+				tr
+					td Float
+					td 16.53
+				tr
+					td Boolean
+					td true o false
+				tr
+					td Array
+					td [‘x’, y‘’, ‘z’]
+				tr
+					td NULL
+					td null
+				tr
+					td Resource
+					td Recursos externos de PHP
+	div.row(style="margin-bottom:1%;")
+		div.col-2
+		div.col-8
+			h3 Alcance/Scope de las variables
+			p El ámbito de una variable es la zona del programa en la que está definida. Las variables de PHP tienen tres ámbitos.
+			ul 
+				li Variables globales: una variable global tiene alcance global, lo que significa que puede definirse en cualquier parte de su código JavaScript.
+				li Variables locales: una variable local sólo estará visible en una función en la que esté definida. Los parámetros de función son siempre locales para esa función.
+				li Variables static: cuando se ejecuta su acción, esta variable se destruye.
+				li Variables
+			p Las variables se identifican mediante el símbolo $ y no es necesario indicar su tipo. Estas, distinguen entre mayúsculas y minúsculas. Las cadenas de caracteres pueden ser encapsuladas tanto en dobles comillas como en comillas simples.
+	div.row(style="margin-bottom:1%;")
+		div.col-2
+		div.col-8
+			h3 Operadores aritmeticos en PHP
+			table.table.table-striped.table-hover
+				tr
+					td (+) Adición
+					td Suma al número A el número B.   
+				tr
+					td (-) Sustracción
+					td Resta al número A el número B.
+				tr
+					td (*) Multiplicación
+					td Multiplica el número A por el número B.
+				tr
+					td (/) División
+					td Divide el número A entre el número B.
+				tr
+					td (%) Módulo
+					td Divide el número A por el número B. Devuelve el residuo de la división.
+				tr
+					td (**) Exponente
+					td Aumenta el número A a la B.
+				tr
+					td (++) Incremento
+					td Incremente el número A +1.
+				tr
+					td (++) Incremento
+					td Decrementa el número A -1.
+	div.row(style="margin-bottom:1%;")
+		div.col-2
+		div.col-8
+			h3 Operadores de incremento en PHP
+			table.table.table-striped.table-hover
+				tr
+					td (++$x) Pre incremento
+					td Incrementa $x en una, retorna el valor de $x.
+				tr
+					td ($x++) Post incremento
+					td Retorna el valor de $x, incrementa $x en una.
+				tr
+					td (--$x) Pre decremento
+					td Decrementa $x en una, retorna el valor de $x.
+				tr
+					td ($x--) Post decremento
+					td Retorna el valor de $x, decrementa $x en una.
+	div.row(style="margin-bottom:1%;")
+		div.col-2
+		div.col-8
+			h3 Operadores lógicos en PHP
+			table.table.table-striped.table-hover
+				tr
+					td (&&) AND
+					td Devuelve true si dos expresiones son verdaderas.
+				tr
+					td (||) OR
+					td Devuelve true si cualesquiera de las expresiones evaluadas son verdaderas.
+				tr
+					td (¡) NOT
+					td Devuelve true si una expresión es falsa.
+	div.row(style="margin-bottom:1%;")
+		div.col-2
+		div.col-8
+			h3 Operadores de comparación en PHP.
+			table.table.table-striped.table-hover
+				tr
+					td (==) Igual
+					td Devuelve true si dos expresiones son iguales.
+				tr
+					td (===) Idéntica
+					td Devuelve true si dos expresiones son idénticas.
+				tr
+					td (!=) Diferente que
+					td Devuelve true si dos expresiones son diferentes.
+				tr
+					td (!=) Diferente que
+					td Devuelve true si dos expresiones son diferentes.
+				tr
+					td (!==) No idéntica
+					td Devuelve true si dos expresiones no son idénticas.
+				tr
+					td (>) Mayor que
+					td Devuelve true si la expresión A es mayor que la expresión B.
+				tr
+					td (>=) Mayor o igual que
+					td Devuelve true si la expresión A es mayor o igual a la expresión B.
+				tr
+					td (<) Menor que
+					td Devuelve true si la expresión A es mayor o igual a la expresión B.
+				tr
+					td (<=) Menor o igual que
+					td Devuelve true si la expresión A es menor o igual a la expresión B.

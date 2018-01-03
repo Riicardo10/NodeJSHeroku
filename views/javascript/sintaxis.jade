@@ -1,0 +1,32 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Sintaxis.
+	div.row(style="margin-bottom:3%;")
+		div.col-2
+		div.col-8
+			h3 Puntos y comas
+			p Las sentencias en JavaScript son simples, pueden llevar al final de ellas un punto y coma, opcionalmente, el lenguaje no es tan estricto en ese punto. Ejemplo.
+	div.row(style="margin-bottom:3%;")
+		div.col-2
+		div.col-8
+			h3 Comentarios
+			p Los comentarios en JavaScript pueden ser de bloque o de línea. 
+	div.row(style="margin-bottom:3%;")
+		div.col-2
+		div.col-8
+			h3 Colocación de Scripts en un archivo HTML
+			p El código JavaScript a implementar puede encontrarse en cualquier parte del documento HTML. Pero es preferible incluirlo en la sección del < head >, del < body >, o en las dos. Se pueden tener tantos Scripts como sean necesarios. Ejemplo.
+			p Normalmente, las funciones se declaran en el < head >, debido a que el flujo del programa es de arriba hacia abajo.
+	div.row(style="margin-bottom:10%;")
+		div.col-2
+		div.col-8
+			h3 Script en otro archivo
+			p Se puede tener la estructura HTML en un archivo *.html y la lógica del programa en un archivo aparte *.js, la extensión del script debe terminar en .js. Posteriormente, en el <head> se enlaza el script creado al documente HTML. Ejemplo.
+
+

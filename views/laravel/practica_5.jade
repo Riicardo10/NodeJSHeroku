@@ -1,0 +1,288 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 PRACTICA 5 - CRUD con Laravel + MySQL.
+			ol
+				li Crear una modelo en Laravel 5  que cuente con los siguientes atributos para posteriormente migrarlos a la base de datos MySQL.
+				table.table.table-striped.table-hover
+					tr
+						th Campo
+						th Tipo
+					tr
+						td id
+						td int
+					tr
+						td nombre
+						td varchar(40)
+					tr
+						td apellidos
+						td varchar(40)
+					tr
+						td edad
+						td int
+				li En el CMD, nos posicionamos en el directorio sobre el cual crearemos el proyecto Laravel. (>cd + directorio).
+				li Crear proyecto Laravel con los comandos de Composer.
+					br
+					p.parrafo-centrado
+						i > composer create-project laravel/laravel practica_5 --prefer-dist
+					br
+				li Nos posicionamos sobre el directorio en el que se creó el proyecto (>cd + directorio).
+				li Revisamos que los archivos y carpetas que genera Composer las haya creado correctamente.
+					img(src="/img/186.png" width=800)
+					br
+				li Creamos un modelo en Laravel para posteriormente migrarlo a la base de datos.
+					p.parrafo-centrado
+						i > php artisan make:model PersonaModel -m
+					br
+					p Se crea un archivo .php en el directorio app/ del proyecto, nombrado PersonaModel.php el cual será el archivo que se tomará como modelo para realizar consultas a la base de datos y también se crea la migración la cual es un archivo .php en el directorio database/migrations con el nombre ####_##_##_######_create_persona_models_table.php, en el cual podemos crear la estructura de la tabla y migrarla a la base de datos, para que Laravel interprete esa estructura y la convierta a código SQL.
+				li Abrimos el modelo que creamos (archivo PersonaModel.php).
+					img.practicas(src="/img/217.png")
+					br
+				li Abrimos la migración ####_##_##_######_create_personas_models_table.php
+					img.practicas(src="/img/218.png")
+					br
+					p La función up() se usa para migrar la estructura a la base de datos.
+					p La función down() se usa para realizar un rollback de la base de dato
+				li Modificamos el archivo de la migración para crear la estructura de la tabla que deseamos migrar a la base de datos.
+					img.practicas(src="/img/219.png")
+					br
+				li Creamos la base de datos en nuestro gestor MySQL.
+					p.parrafo-centrado
+						i > CREATE DATABASE persona_laravel;
+					br
+				li Configuramos la conexión de la base de datos con Laravel + MySQL. Abrimos el archivo .env (se encuentra en raíz) y asignamos los datos de conexión.
+					img.practicas(src="/img/221.png")
+					br
+				li Abrimos el CMD para realizar la migración de la estructura construida anteriormente a la base de datos utilizando un comando de Artisan. (php artisan migrate)
+					p.parrafo-centrado
+						i > php artisan migrate
+				li Abrimos nuestro MySQL realizamos una consulta para ver las tablas que existen en la base de datos a la que migramos la estructura.
+					p.parrafo-centrado
+						i > show tables;
+					br
+				li Describimos la migración que realizamos (tabla persona_models).
+					p.parrafo-centrado
+						i > desc persona_models
+					br
+				li Modificamos el archivo de rutas, agregamos una ruta de tipo resource /persona y asignamos el controlador ControladorPersona para que este controlador maneje la lógica de la petición y respuesta de esta ruta.
+					img.practicas(src="/img/225.png")
+					br
+				li Creamos el controlador ControladorPersona; haciendo uso de los comandos de Artisan. Se creará un archivo .php en el directorio app/Http/Controllers.
+				li Abrimos el controlador que creamos.
+					img.practicas(src="/img/226.png")
+					br
+				li Importamos nuestro modelo al controlador para realización gestiones a la base de datos.
+					img.practicas(src="/img/227.png")
+					br
+				li Configuramos la función index() del controlador, la cual redireccionará a una vista, mandando como parámetro una lista de la consulta a la tabla del modelo PersonaModel.
+					img.practicas(src="/img/228.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 6 → 9
+							td Creación de la función index() del controlador ControladorPersona.
+						tr
+							td 7
+							td Creación de una variable $registros_personas, le asignamos la consulta de la tabla de la base de datos del modelo PersonaModel.
+						tr
+							td 8
+							td Retornamos la vista personas.blade.php, mandando como parámetro la variable con la consulta que se realizó.
+				li Configuramos la función store() del controlador, la cual creará un nuevo registro del modelo PersonaModel y lo guardará en la base de datos. Una vez que el registro nuevo es almacenado, redirige a la ruta /persona.
+					img.practicas(src="/img/229.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 12 → 19
+							td Creación de la función store() del controlador ControladorPersona.
+						tr
+							td 13
+							td Creación de una variable $persona, le asignamos una instancia del modelo PersonaModel.
+						tr
+							td 14 → 16
+							td Asignación de elementos a los campos del modelo PersonaModel.
+						tr
+							td 17
+							td Guardamos el registro en la base de datos.
+						tr
+							td 18
+							td Retornamos una redirección a la ruta inicial /personas
+				li Configuramos la función show() del controlador, la cual busca un registro de la base de datos y retorna la vista editar_persona.blade.php, mandándole como parámetro el registro que buscó.
+					img.practicas(src="/img/230.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 20 → 23
+							td Creación de la función show() del controlador ControladorPersona.
+						tr
+							td 21
+							td Creación de una variable $persona, con el método find(), buscamos el registro, basado en su id y se lo asignamos a la variable.
+						tr
+							td 22
+							td Retornamos la vista editar_persona.blade.php, mandando como parámetro la variable con la consulta que se realizó.
+					br
+				li Configuramos la función update() del controlador, la cual modifica un registro de la base de datos. Una vez que el registro a sido actualizado, redirige a la ruta /persona.
+					img.practicas(src="/img/232.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 26 → 33
+							td Creación de la función update() del controlador ControladorPersona.
+						tr
+							td 26 → 33
+							td Modificamos el registro de la tabla del modelo PersonaModel, basado en el id.
+						tr
+							td 32
+							td Retornamos una redirección a la ruta inicial /personas
+				li Configuramos la función destroy() del controlador, la cual elimina un registro de la base de datos. Una vez que el registro a sido eliminado, redirige a la ruta /persona.
+					img.practicas(src="/img/233.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 34 → 38
+							td Creación de la función destroy() del controlador ControladorPersona.
+						tr
+							td 35
+							td Creación de una variable $persona, con el método find(), buscamos el registro, basado en su id y se lo asignamos a la variable.
+						tr
+							td 36
+							td Eliminamos el registro que cargamos a la variable $persona.
+						tr
+							td 37
+							td Retornamos una redirección a la ruta inicial /personas
+				li Para poder manejar los formularios, haremos uso de una extensión de Composer. En el CMD escribimos el siguiente comando para instalar la extensión.
+					p.parrafo-centrado
+						i > composer require "laravelcollective/html":"^5.4.0"
+					br
+				li En el directorio resources/views creamos la vista, la cual será un archivo con extensión .blade.php nombrado personas. Escribimos el siguiente código HTML + Blade.
+					center
+						table
+							tr
+								td
+									img.practicas(src="/img/235a.png")
+							tr
+								td
+									img.practicas(src="/img/235b.png")
+							tr
+								td
+									img.practicas(src="/img/235c.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Declaración del DOCTYPE, indica el tipo de documento que interpretará el navegador, en este caso es un documento HTML.
+						tr
+							td 2 → 39
+							td Inicio y cierre del documento HTML.
+						tr
+							td 3 → 5
+							td Declaración del head, cabecera del documento HTML.
+						tr
+							td 4
+							td Título (title) de la página HTML.
+						tr
+							td 6 → 38
+							td Inicio y cierre del body (cuerpo) del documento HTML.
+						tr
+							td 7
+							td Definicion de un encabezado tipo < h1 >
+						tr
+							td 8 → 13
+							td Definición de un formulario que se usará para crear un nuevo registro, el cual redirige a la función store() del controlador.
+						tr
+							td 9 → 11
+							td Definicion de campos de texto.
+						tr
+							td 12
+							td Definicion de un submit, el cual envía el formulario a la ruta señalada.
+						tr
+							td 14 → 37
+							td Definicion de una tabla.
+						tr
+							td 15 → 36
+							td Bucle foreach, recorre la lista de elementos que se mandaron de la función del controlador index().
+						tr
+							td 16 → 35
+							td Por cada registro se creará una fila < tr >.
+						tr
+							td 17 → 20
+							td Celdas < td >. Imprimen el valor del campo del registro iterado.
+						tr
+							td 21 → 27
+							td Definicion de una celda para agregar un formulario de eliminación para cada registro.
+						tr
+							td 22 → 26
+							td Por cada registro se creará un formulario de eliminación; para mandar el id del registro seleccionado a la función destroy() del controlador
+						tr
+							td 23
+							td Definicion del método HTTP que recibirá esa petición.
+						tr
+							td 28 → 34
+							td Definicion de una celda para agregar un formulario de eliminación para cada registro.
+						tr
+							td 29 → 33
+							td Por cada registro se creará un formulario de actualización; para mandar el id del registro seleccionado a la función show() del controlador.
+						tr
+							td 30
+							td Definicion del método HTTP que recibirá esa petición.
+				li En el directorio resources/views creamos la vista, la cual será un archivo con extensión .blade.php nombrado editar_persona. Escribimos el siguiente código HTML + Blade.
+					img.practicas(src="/img/236.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Declaración del DOCTYPE, indica el tipo de documento que interpretará el navegador, en este caso es un documento HTML.
+						tr
+							td 2 → 15
+							td Inicio y cierre del documento HTML.
+						tr
+							td 3
+							td Declaración del head, cabecera del documento HTML.
+						tr
+							td 4 → 14
+							td Inicio y cierre del body (cuerpo) del documento HTML.
+						tr
+							td 5
+							td Definicion de un encabezado tipo < h1 >
+						tr
+							td 6 → 13
+							td Definición de un formulario que se usará para modificar un registro, el cual redirige a la función update() del controlador.
+						tr
+							td 7 → 11
+							td Definicion de campos de texto.
+						tr
+							td 12
+							td Definicion de un submit, el cual envía el formulario a la ruta señalada.
+				li Corremos el servidor haciendo uso de artisan. (El servidor corre por el puerto 8000 en nuestro localhost)
+					p.parrafo-centrado
+						i > php artisan serve
+					br
+				li Abrimos el navegador en la ruta que definimos en nuestro archivo de rutas (/persona) para ver la vista con la que nos responde la ruta.
+					img.practicas(src="/img/238.png")
+					br
+			p De esta manera se crea un CRUD (Create-Read-Update-Delete), podemos agregar registros, visualizarlos, actualizarlos y eliminarlos.

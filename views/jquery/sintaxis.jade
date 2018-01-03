@@ -1,0 +1,26 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Sintaxis.
+			p Su sintaxis está hecha para seleccionar elementos HTML con menos código y realizar acciones sobre ellos.
+			
+
+	div.row(style="margin-bottom:3%;")
+		div.col-4
+		div.col-4
+			p La sintaxis básica es:
+			i $(selector).action()
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-10
+			p jQuery utiliza la sintaxis de CSS para seleccionar los elementos de un documento HTML
+			p Al momento de utilizar jQuery, todos los eventos deben de encontrarse dentro de la función 
+				i ready()
+			p Y esta función debe encontrarse en el bloque del < script >. Los eventos se tienen que incluir en la función ready para evitar que se ejecute cualquier código jQuery antes de que el documento termine de cargarse en el navegador.
+
+			

@@ -1,0 +1,62 @@
+extends ./layout/layout
+block menu
+	include menu/menu
+block contenido
+	script(type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	link(rel="stylesheet" href="/css/menu.css")
+	div.area-index
+		br
+		div.row
+			div.col-1
+			div#seccion_html.col-10
+				include practicas/practicas_html
+		br 
+		div.row		
+			div.col-1
+			div#seccion_css.col-10
+				include practicas/practicas_css
+		br
+		div.row
+			div.col-1
+			div#seccion_bootstrap.col-10
+				include practicas/practicas_bootstrap
+		br
+		div.row
+			div.col-1
+			div#seccion_materialize.col-10
+				include practicas/practicas_materialize
+		br
+		div.row
+			div.col-1
+			div#seccion_javascript.col-10
+				include practicas/practicas_javascript
+		br
+		div.row
+			div.col-1
+			div#seccion_jquery.col-10
+				include practicas/practicas_jquery
+		br
+		div.row
+			div.col-1
+			div#seccion_angularjs.col-10
+				include practicas/practicas_angularjs
+		br
+		div.row
+			div.col-1
+			div#seccion_ajax.col-10
+				include practicas/practicas_ajax
+		br
+		div.row
+			div.col-1
+			div#seccion_php.col-10
+				include practicas/practicas_php
+		br
+		div.row
+			div.col-1
+			div#seccion_laravel.col-10
+				include practicas/practicas_laravel
+		br
+		div.row
+			div.col-1
+			div#seccion_nodejs.col-10
+				include practicas/practicas_nodejs

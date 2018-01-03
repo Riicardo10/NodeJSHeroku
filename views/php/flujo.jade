@@ -1,0 +1,38 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Flujo.
+			p Mientras escribimos un programa, encontramos situaciones donde queremos que ejecute ciertas líneas de código si una condición se cumple y otras líneas en caso de que no se cumpla la condición. También necesitamos hacer varias veces una misma tarea. Para estos casos existen las sentencias de control if- else y switch  y los bucles for y while.
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+		div.col-10
+			h3 if - else
+			p Si una expresión es verdadera, se ejecutarán las líneas de código que se encuentren dentro del bloque if. Si la expresión es false, se ejecutarán las líneas de código que se encuentran en el bloque else.
+			center
+				img(src="https://www.tutorialspoint.com/javascript/images/decision_making.jpg")
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+		div.col-10
+			h3 switch - case
+			p Si existiera un caso donde se usarán varias/muchas sentencias if-else, es recomendable implementar la sentencia switch, la cual maneja casos que pueden ejecutarse si una condición es verdadera.
+			center
+				img(src="https://www.tutorialspoint.com/javascript/images/switch_case.jpg")
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+		div.col-10
+			h3 while
+			p El propósito de este ciclo es ejecutar repetidas veces las sentencias de código que se encuentran en su bloque mientras la expresión a evaluar sea verdadera. Si la expresión cambia a un valor falso, el ciclo terminará.
+			center
+				img(src="https://www.tutorialspoint.com/javascript/images/while_loop.jpg")
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-10
+			h3 do - while
+			p El propósito de este ciclo es ejecutar por lo menos una vez las sentencias de código que se encuentran en su bloque, posteriormente se evalúa la expresión. Si esta es verdadera entrará de nuevo a iterar. Si la expresión cambia a un valor falso, el ciclo terminará.
+			center
+				img(src="https://www.tutorialspoint.com/javascript/images/do_while_loop.jpg")

@@ -1,0 +1,15 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Paginacion.
+			p Para hacer uso de paginaciones en Materialize, se debe crear una lista no ordenada ul, con clase pagination, posteriormente dentro de la lista, crear los elementos li necesarios con su respectiva clase.
+			p Se pueden añadir links de paginación para ayudar a dividir tus contenidos largos en bloques más pequeños y fáciles de entender.
+			center
+				img(src="https://cdn.dribbble.com/users/38618/screenshots/1974779/pagination.png" width="500")
+			br
+			a(href="http://materializecss.com/pagination.html") Documentacion oficial de Materialize.

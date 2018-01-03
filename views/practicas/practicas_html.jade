@@ -1,0 +1,82 @@
+center
+	h1.subencabezado(onclick="ocultarHTML()" title="Mostrar/Ocultar" style="cursor:pointer;  background:#248; color:white;") HTML
+div.row#html
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="GET" action="/html")
+					input.btn.btn-link(type="submit" value="Concepto" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/html/estructura")
+					input.btn.btn-link(type="submit" value="Estructura de un HTML" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/html/etiquetas")
+					input.btn.btn-link(type="submit" value="Etiquetas basicas" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/html/formularios")
+					input.btn.btn-link(type="submit" value="Formularios" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/html/formularios/metodos")
+					input.btn.btn-link(type="submit" value="Envio de formularios" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/html/referencias")
+					input.btn.btn-link(type="submit" value="Referencias" style="color: black;")
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value='<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 1</title>\n\t</head>\n\t<body>\n\t\t<h2>ANIMALES</h2>\n\t\t<h3>Ejemplos:</h3>\n\t\t<p>León</p>\n\t\t<p>Descripción del ejemplar.</p>\n\t\t<p>Tigre</p>\n\t\t<p>Descripción del ejemplar.</p>\n\t\t<p>Pantera</p>\n\t\t<p>Descripción del ejemplar.</p>\n\t</body>\n</html>')
+					input.btn.btn-link(type="submit" value="Practica 1" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 2</title>\n\t</head>\n\t<body>\n\t\t<h1>INFORMACION IMPORTANTE</h1>\n\t\t<h2>Datos personales.</h2>\n\t\t<p><b>Nombre completo:</b> Edgar Valente Fonseca Castro</p>\n\t\t<p><b>Fecha de nacimiento:</b> 24/Julio/1992</p>\n\t\t<p><b>Sexo:</b> Masculino</p>\n\t\t<h2>Datos familiares.</h2>\n\t\t<p><b>Nombre completo del padre:</b> Edgar Fonseca Tejeda</p>\n\t\t<p><b>Nombre completo de la madre:</b> Dalia Castro Alcocer</p>\n\t\t<h2>Datos deportivos.</h2>\n\t\t<p><b>Deporte favorito:</b> Futbol</p>\n\t\t<p><b>Jugador favorito:</b> Cristiano Ronaldo</p>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 2" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 3</title>\n\t</head>\n\t<body>\n\t\t<table>\n\t\t\t<tr>\n\t\t\t\t<td rowspan='3'><b>Letras</b></td>\n\t\t\t\t<td>A</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>B</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>C</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td rowspan='3'><b>Numeros</b></td>\n\t\t\t\t<td>1</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>2</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>3</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td rowspan='3'><b>Colores</b></td>\n\t\t\t\t<td>Verde</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Rojo</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Azul</td>\n\t\t\t</tr>\n\t\t</table>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 3" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 4</title>\n\t</head>\n\t<body>\n\t\t<h1>LENGUAJES DE PROGRAMACIÓN</h1>\n\t\t<ol>\n\t\t\t<li><b>Escritorio</b></li>\n\t\t\t<ul>\n\t\t\t\t<li>Java</li>\n\t\t\t\t<li>C</li>\n\t\t\t\t<li>C++</li><li>Ruby</li>\n\t\t\t\t<li>Python</li>\n\t\t\t</ul>\n\t\t\t<li><b>Web</b></li>\n\t\t\t<ul>\n\t\t\t\t<li>PHP</li>\n\t\t\t\t<li>JavaScript</li>\n\t\t\t</ul>\n\t\t\t<li><b>Móvil</b></li>\n\t\t\t<ul>\n\t\t\t\t<li>Java</li>\n\t\t\t\t<li>Swift</li>\n\t\t\t</ul>\n\t\t</ol>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 4" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 5</title>\n\t</head>\n\t<body>\n\t\t<h1>REDES SOCIALES</h1>\n\t\t<b>Concepto.</b>\n\t\t<p>Descripcion... <u><i>plataformas digitales</i></u>.</p>\n\t\t<hr>\n\t\t<b>Ejemplos.</b>\n\t\t<ul>\n\t\t\t<li>Facebook</li>\n\t\t\t<li>Twitter</li>\n\t\t\t<li>Instagram</li>\n\t\t\t<li>WhatsApp</li>\n\t\t</ul>\n\t\t<hr>\n\t\t<table>\n\t\t\t<thead>\n\t\t\t\t<td><b>Ventajas.</b></td>\n\t\t\t\t<td><b>Desventajas.</b></td>\n\t\t\t</thead>\n\t\t\t<tr>\n\t\t\t\t<td>Comunicación Instantánea</td>\n\t\t\t\t<td>Estafas</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Información</td>\n\t\t\t\t<td>Damos a conocer la vida privada</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Entretenimiento</td>\n\t\t\t\t<td>Suplantaciones de identidad</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Oportunidades laborales</td>\n\t\t\t\t<td>Acoso</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Difunsión de contenidos</td>\n\t\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Conexión mundial</td>\n\t\t\t\t<td>Adicción</td>\n\t\t\t</tr>\n\t\t</table>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 5" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 6</title>\n\t</head>\n\t<body>\n\t\t<h1>LISTADO DE PRODUCTOS</h1>\n\t\t<table>\n\t\t\t<tr>\n\t\t\t\t<th>Producto</th>\n\t\t\t\t<th>Precio</th>\n\t\t\t\t<th>Cantidad</th>\n\t\t\t\t<th>Total</th>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Cuaderno</td>\n\t\t\t\t<td>11</td>\n\t\t\t\t<td>3</td>\n\t\t\t\t<td>33</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Lapicero</td>\n\t\t\t\t<td>4</td>\n\t\t\t\t<td>4</td>\n\t\t\t\t<td>16</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td></td>\n\t\t\t\t<td>49</td>\n\t\t\t</tr>\n\t\t</table>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 6" style="color: black;")
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 7</title>\n\t</head>\n\t<body>\n\t\t<h1>DEPORTES</h1>\n\t\t<p>\n\t\t\tDescripcion...\n\t\t</p>\n\t\t<h3>Ejemplos</h3>\n\t\t<ol>\n\t\t\t<li><a href='https://es.wikipedia.org/wiki/Fútbol'>Futbol</a></li>\n\t\t\t<li><a href='https://es.wikipedia.org/wiki/Baloncesto'>Basquetbol</a></li>\n\t\t</ol>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 7" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 8</title>\n\t</head>\n\t<body>\n\t\t<h1>NAVEGADORES WEB</h1>\n\t\t<p>Descripcion....</p>\n\t\t<h2>Navegador web más usado actualmente:</h2>\n\t\t<h4><a href='http://www.google.com'>Google Chrome</a></h4>\n\t\t<h2>Ranking de los navegadores más usados.</h2>\n\t\t<img src='https://www.anapi.com/web/wp-content/uploads/2014/07/gráfico-navegadores-actualizados.png'>\n\t\t<footer>\n\t\t\t<blockquote>\n\t\t\t\t<cite>Instituto Tecnológico de Chilpancingo - Programación web</cite>\n\t\t\t</blockquote>\n\t\t</footer>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 8" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 9</title>\n\t</head>\n\t<body>\n\t\t<h1>FORMULARIO</h1>\n\t\t<form>\n\t\t\t<table>\n\t\t\t\t<tr>\n\t\t\t\t\t<td><label>Introduce nombre completo:</label></td>\n\t\t\t\t\t<td><input type='text'></td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td><label>Selecciona país:</label></td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<select>\n\t\t\t\t\t\t\t<option>México</option>\n\t\t\t\t\t\t\t<option>Estados Unidos</option>\n\t\t\t\t\t\t\t<option>Canadá</option>\n\t\t\t\t\t\t</select>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td><label>Mensaje:</label></td>\n\t\t\t\t\t<td><textarea></textarea></td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td><input type='button' value='Reset'></td>\n\t\t\t\t\t<td><input type='button' value='Enviar'></td>\n\t\t\t\t</tr>\n\t\t\t</table>\n\t\t</form>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 9" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 10</title>\n\t</head>\n\t<body>\n\t\t<h1>FORMULARIO</h1>\n\t\t<form>\n\t\t\t<table>\n\t\t\t\t<tr>\n\t\t\t\t\t<td><label>Introduce nombre:</label></td>\n\t\t\t\t\t<td><input type='text'></td>\n\t\t\t\t\t<td><label>Introduce apellido paterno:</label></td>\n\t\t\t\t\t<td><input type='text'></td>\n\t\t\t\t\t<td><label>Introduce apellido materno:</label></td>\n\t\t\t\t\t<td><input type='text'></td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td><label>Introduce dirección::</label></td>\n\t\t\t\t\t<td><textarea></textarea></td>\n\t\t\t\t\t<td><label>Fecha de nacimiento:</label></td>\n\t\t\t\t\t<td><input type='date'></td>\n\t\t\t\t\t<td><label>Introduce sexo:</label></td>\n\t\t\t\t\t<td><input type='radio'>Masculino</td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td></td><td></td><td></td><td></td><td></td>\n\t\t\t\t\t<td><input type='radio'>Femenino</td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td></td><td></td><td></td><td></td><td></td>\n\t\t\t\t\t<td><input type='button' value='Enviar'></td>\n\t\t\t\t</tr>\n\t\t\t</table>\n\t\t</form>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 10" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 11</title>\n\t</head>\n\t<body>\n\t\t<h1>GUSTOS E INTERESES</h1>\n\t\t<table>\n\t\t\t<tr>\n\t\t\t\t<td>\n\t\t\t\t\t<table>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<label><b>Navegador web:</b></label>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Google Chrome</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Safari</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Opera</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</table>\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t\t<table>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<label><b>Sistema operativo:</b></label>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Windows</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Mac OS</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Ubuntu</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</table>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>\n\t\t\t\t\t<table>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<label><b>Lenguaje de programación:</b></label>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'> Java</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Swift</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Ruby</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</table>\n\t\t\t\t</td>\n\t\t\t\t<td>\n\t\t\t\t\t<table>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<label><b>Herramienta de desarrollo:</b></label>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Sublime Text</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Visual Studio Code</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label><input type='radio'>  Brackets</label></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</table>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><input type='button' value='Enviar'></td>\n\t\t\t</tr>\n\t\t</table>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 11" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PRACTICA 12</title>\n\t</head>\n\t<body>\n\t\t<table>\n\t\t\t<tr>\n\t\t\t\t<td colspan='5'><input type='number'></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><input type='button' value='1 '></td>\n\t\t\t\t<td><input type='button' value='2 '></td>\n\t\t\t\t<td><input type='button' value='3 '></td>\n\t\t\t\t<td><input type='button' value='+'></td>\n\t\t\t\t<td><input type='button' value='* '></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><input type='button' value='4 '></td>\n\t\t\t\t<td><input type='button' value='5 '></td>\n\t\t\t\t<td><input type='button' value='6 '></td>\n\t\t\t\t<td><input type='button' value='/ '></td>\n\t\t\t\t<td><input type='button' value='- '></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><input type='button' value='7 '></td>\n\t\t\t\t<td><input type='button' value='8 '></td>\n\t\t\t\t<td><input type='button' value='9 '></td>\n\t\t\t\t<td><input type='button' value='0'></td>\n\t\t\t\t<td><input type='button' value='='></td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td><input type='button' value='C' '></td>\n\t\t\t</tr>\n\t\t</table>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 12" style="color: black;")
+script.
+	var bandera_html = true
+	function ocultarHTML(){	
+		document.getElementById('html').hidden = bandera_html
+		bandera_html = !bandera_html
+	}
+	

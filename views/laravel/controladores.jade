@@ -1,0 +1,45 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:0%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Controladores.	
+			p Basado de la documentación oficial de Laravel. Disponible en https://laravel.com/docs/5.5/
+			p Los Controladores agrupan las peticiones HTTP relacionada con la manipulación lógica en una clase. Estos normalmente se almacenan en el directorio de aplicación app/Http/Controllers/.
+			p Un controlador usualmente trabaja con las peticiones:
+	div.row(style="margin-bottom:1%;")
+		div.col-4
+		div.col-4
+			ol 
+				li GET, POST, PUT, DELETE, PATCH.
+				li Asociando los métodos de la siguiente forma:
+				li GET: index, create, show, edit.
+				li POST: store.
+				li PUT: update.
+				li DELETE: destroy.
+				li PATCH: update.
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+		div.col-10
+			h4 Controlador
+			p Para crear controladores por medio de la línea de comandos de Artisan, debemos posicionarnos en la carpeta de nuestro proyecto y escribir lo siguiente:
+			center
+				i php artisan make:controller NombreControlador
+			p El comando anterior creará un controlador en la carpeta app/Http/Controllers
+			h4 Controlador Resource
+			p Para que un controlador manipule completamente una ruta, creamos una ruta de tipo resource en nuestro archivo de configuracion de rutas.
+			center
+				i Route::resource('ruta', 'NombreControlador')
+			p Esta ruta nos creara un grupo de recursos con las peticiones que estas mencionadas arriba: index, create, show, edit, store, update, destroy. Estas son las operaciones mas usadas en una clase y para no tener que crear una ruta para cada método es que Laravel agrupa todo esto con una ruta de tipo resource que se liga a un controlador.
+			h5 Significados de los métodos del controlador.
+			ul 
+				li index: Es el método inicial de las rutas resource, usualmente lo usamos para mostrar una vista como página principal que puede contener un catalogo o resumen de la información del modelo al cual pertenece o bien no mostrar información y solo tener la función de página de inicio.
+				li create: Este método lo podemos usar para direccionar el sistema a la vista donde se van a recolectar los datos (probablemente con un formulario) para después almacenarlos en un registro nuevo, usualmente redirige al index.
+				li show: Aqui podemos hacer unna consulta de un elemento de la base de datos o de todos los elementos o registros por medio del modelo para realizar una descripcion.
+				li edit: Este método es similar al de create porque lo podemos usar para mostrar una vista que recolecta los datos, pero a diferencia de create es con el fin de actualizar un registro.
+				li store: Aqui es donde se actualiza un registro en especifico que proviene del método create y normalmente redirige al index.
+				li update: Al igual que el store, solo que en vez de provenir de create proviene de edit y en vez de crear un nuevo registro, busca un existente y lo modifica, tambien suele redirigir al index.
+				li destroy: En este método usualmente se destruye o elimina un registro y la petición puede provenir de donde sea siempre y cuando sea llamado con el método DELETE, después puede redirigir al index o a otro sitio dependiendo si logro eliminar o no.

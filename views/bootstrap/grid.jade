@@ -1,0 +1,15 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Sistema de grid.
+			p El sistema de grid permite hasta 12 columnas en la página web, en caso de que no se deseen usar las 12 columnas, se pueden agrupar estas mismas para formar columnas más amplias.
+			p El sistema de grid es responsivo, por lo cual las columnas se reorganizan automáticamente para cualquier tamaño de pantalla.
+			center
+				img(src="https://tutorialzine.com/media/2017/01/1-basic-grid.png" width="700")
+			br
+			a(href="https://v4-alpha.getbootstrap.com/layout/grid/") Documentacion oficial de Bootstrap 4.

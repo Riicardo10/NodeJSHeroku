@@ -1,0 +1,55 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 PRACTICA 1 - Ruta Hola mundo!
+			ol
+				li En el CMD, nos posicionamos en el directorio sobre el cual crearemos el proyecto Laravel. (>cd + directorio).
+				li Crear proyecto Laravel con los comandos de Composer.
+					br
+					p.parrafo-centrado
+						i > composer create-project laravel/laravel practica_1 --prefer-dist
+					br
+				li Nos posicionamos sobre el directorio en el que se creó el proyecto (>cd + directorio).
+				li 
+					p Revisamos que los archivos y carpetas que genera Composer las haya creado correctamente.
+					br
+					img(src="/img/186.png" width=800)
+					br
+					p El archivo web.php (archivo encargado de definir las rutas) ya incluye por default la ruta raíz (/), la cual retorna la vista de bienvenida de Laravel.
+					p Nosotros modificamos el archivo web.php, agregando la ruta /hola, y en la función asignamos el código que se ejecutará cuando el usuario entre a esa ruta, la cual retorna una cadena de texto “Hola mundo!”.
+					img.practicas(src="/img/187.png")
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1 → *
+							td Inicio y cierre del script en PHP.
+						tr
+							td 2 → 4
+							td Definicion de la ruta / por el método GET (ruta predefinida).
+						tr
+							td 3
+							td Respuesta del servidor. Retorna la vista welcome.blade.php (vista predefinida).
+						tr
+							td 5 → 7
+							td Definicion de la ruta /hola por el método GET.
+						tr
+							td 6
+							td Respuesta del servidor. Retornamos la cadena “Hola mundo!”.
+				li Corremos el servidor haciendo uso de artisan. (El servidor corre por el puerto 8000 en nuestro localhost).
+					p.parrafo-centrado
+						i > php artisan serve
+					br
+				li Abrimos el navegador en la ruta raíz (/) para ver la página de bienvenida de Laravel (por default).
+					center
+						img(src="/img/189.png" width=700)
+					br
+				li Abrimos el navegador en la ruta que configuramos /hola para que el servidor retorne la 
+					center
+						img(src="/img/190.png" width=700)

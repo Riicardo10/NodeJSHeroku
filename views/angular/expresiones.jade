@@ -1,0 +1,14 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Expresiones.
+			p Las expresiones AngularJS están escritas dentro de dobles llaves: {{expression}}, y son usadas para generar o mostrar datos exactamente donde se escribe la expresión. También se pueden escribir las expresiones dentro de la directiva ng-bind=”expression”
+			p AngularJS vincula datos HTML usando expresiones, y estas son muy similares a las expresiones en JavaScript ya que pueden contener literales, variables y operadores.
+			center
+				img(src="https://image.slidesharecdn.com/2-161010105657/95/curso-angularjs-2-conceptos-basicos-12-638.jpg?cb=1476097282" width="600")
+			

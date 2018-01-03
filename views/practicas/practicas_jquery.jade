@@ -1,0 +1,87 @@
+center
+	h1.subencabezado(onclick="ocultarJquery()" title="Mostrar/Ocultar" style="cursor:pointer;background:#248; color:white;") jQuery
+div.row#jquery
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="GET" action="/jquery")
+					input.btn.btn-link(type="submit" value="Concepto" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/jquery/sintaxis")
+					input.btn.btn-link(type="submit" value="Sintaxis" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/jquery/selectores")
+					input.btn.btn-link(type="submit" value="Selectores" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/jquery/eventos")
+					input.btn.btn-link(type="submit" value="Eventos" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/jquery/referencias")
+					input.btn.btn-link(type="submit" value="Referencias" style="color: black;")
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('#btt_cambiarNombre').click(function() {\n\t\t\t\t\t$('#parrafo').text('Nuevo texto')\n\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<p id='parrafo'>\n\t\t\t\t\tInstituto Tecnológico de Chilpancingo\n\t\t\t\t</p>\n\t\t\t\t<input type='button' id='btt_cambiarNombre' value='Cambiar texto'>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t</div>\n\t</body>\n<html>")
+					input.btn.btn-link(type="submit" value="Practica 1" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\tvar bandera = true\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('#btt_ocultar').click(function() {\n\t\t\t\t\tif (bandera) {\n\t\t\t\t\t\t$('#parrafo').hide(1000)\n\t\t\t\t\t\t$('#btt_ocultar').attr({ value: 'Mostrar' });\n\t\t\t\t\t}\n\t\t\t\t\telse{\n\t\t\t\t\t\t$('#parrafo').show()\n\t\t\t\t\t\t$('#btt_ocultar').attr({ value: 'Ocultar' });\n\t\t\t\t\t}\n\t\t\t\t\tbandera = !bandera\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<input type='button' id='btt_ocultar' value='Ocultar'>\n\t\t\t\t<p id='parrafo'>\n\t\t\t\t\tTexto...\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 2" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('#btt_saludar').click(function(event) {\n\t\t\t\t\tvar entrada = $('#txt_entrada').val()\n\t\t\t\t\t$('#txt_entrada').val('')\n\t\t\t\t\t$('#parrafo').text(entrada)\n\t\t\t\t})\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<input type='text' id='txt_entrada'>\n\t\t\t\t<br><br>\n\t\t\t\t<input type='button' id='btt_saludar' value='Saludar'>\n\t\t\t\t<br><br>\n\t\t\t\t<p id='parrafo'></p>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 3" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('.contenedor').mouseenter(function(event) {\n\t\t\t\t\t$('.contenedor').css('background', 'black');\n\t\t\t\t});\n\t\t\t\t$('.contenedor').mouseout(function(event) {\n\t\t\t\t\t$('.contenedor').css('background', 'red');\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<div class='contenedor'>HOLA</div>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 4" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('#btt_aceptar').click(function(event) {\n\t\t\t\t\tvar texto = $('#txt_entrada').val()\n\t\t\t\t\t$('#parrafo').append(texto + ' ')\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<input type='text' id='txt_entrada'>\n\t\t\t\t<br><br>\n\t\t\t\t<input type='button' id='btt_aceptar' value='Concatenar'>\n\t\t\t\t<p id='parrafo'></p>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 5" style="color: black;")
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('#btt_calcular').click(function(event) {\n\t\t\t\t\tvar numero_a = parseInt($('#numero_a').val())\n\t\t\t\t\tvar numero_b = parseInt($('#numero_b').val())\n\t\t\t\t\t\t$('#parrafo').append(numero_a + ' + ' + numero_b + ' = ' + (numero_a + numero_b) + '<br>' )\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<input type='number' id='numero_a'>\n\t\t\t\t<br><br>\n\t\t\t\t<input type='number' id='numero_b'>\n\t\t\t\t<br><br>\n\t\t\t\t<input type='button' id='btt_calcular' value='Sumar'>\n\t\t\t\t<br><br>\n\t\t\t\t<p id='parrafo'></p>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.xd.btn.btn-link(type="submit" value="Practica 6" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$(document).mousemove(function(event){ \n\t\t\t\t\t$('b').text('X: ' + event.pageX + ', Y: ' + event.pageY); \n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<p>Posicion del mouse: <b></b></p>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 7" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('#parrafo_1').dblclick(function(event) {\n\t\t\t\t\t$('#parrafo_1').css({\n\t\t\t\t\t\tbackground : 'red'\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t\t$('#parrafo_2').dblclick(function(event) {\n\t\t\t\t\t$('#parrafo_2').css({\n\t\t\t\t\t\tbackground : 'yellow'\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t\t$('#parrafo_3').dblclick(function(event) {\n\t\t\t\t\t$('#parrafo_3').css({\n\t\t\t\t\t\tbackground : 'blue'\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<p id='parrafo_1'>Parrafo 1</p>\n\t\t\t\t<p id='parrafo_2'>Parrafo 2</p>\n\t\t\t\t<p id='parrafo_3'>Parrafo 3</p>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 8" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('.contenedor').dblclick(function(event) {\n\t\t\t\t\t$(this).slideUp()\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<div class='contenedor'> Contenedor 1 </div>\n\t\t\t\t<div class='contenedor'> Contenedor 2 </div>\n\t\t\t\t<div class='contenedor'> Contenedor 3 </div>\n\t\t\t\t<div class='contenedor'> Contenedor 4 </div>\n\t\t\t\t<div class='contenedor'> Contenedor 5 </div>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 9" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>\n\t\t<script type='text/javascript'>\n\t\t\t$(document).ready(function(){\n\t\t\t\t$('#imagen').mouseenter(function(event) {\n\t\t\t\t\t$('#imagen').attr({\n\t\t\t\t\t\tsrc: 'https://hackr.io/tutorials/learn-css/logo/css_logo'\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t\t$('#imagen').mouseout(function(event) {\n\t\t\t\t\t$('#imagen').attr({\n\t\t\t\t\t\tsrc: 'https://hackr.io/tutorials/learn-html-5/logo/html-5_logo'\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</head>\n\t<body>\n\t\t<br>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<img src='https://hackr.io/tutorials/learn-html-5/logo/html-5_logo' width='100px' id='imagen'>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 10" style="color: black;")
+script.
+	var bandera_jquery = true
+	function ocultarJquery(){	
+		document.getElementById('jquery').hidden = bandera_jquery
+		bandera_jquery = !bandera_jquery
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

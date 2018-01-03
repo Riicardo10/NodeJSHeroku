@@ -1,0 +1,71 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Concepto.
+			p Es un lenguaje de etiquetas de marcado que define la estructura de cualquier página web. Este determina el contenido de la página (el maquetado), pedo no la funcionalidad. Para hacer una página web con buena apariencia y diseño se utiliza una tecnología web, el cual es el lenguaje de estilos en cascada CSS, y para que la página web tenga funcionalidad o sea interactiva para el usuario final se utiliza el lenguaje de programación JavaScript. (Mozilla, Mozilla, 2017)
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+		div.col-10
+			h3 Marcador HTML
+			p El código HTML se escribe en forma de ‘etiquetas/tags’, estas a su vez tienen que tener un inicio y un cierre, además; ambas deben estar adentro de corchetes angulares (<, >, />).
+			p Los navegadores no muestran las etiquetas, sólo las utilizan para renderizar su contenido.
+			p Ejemplo:
+			table.table.table-striped.table-hover
+				tr
+					td < etiqueta >
+					td < contenido >
+					td < /etiqueta >
+				tr
+					td Inicio de etiqueta
+					td Contenido de la etiqueta
+					td Cierre de la etiqueta
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-5
+			table.table.table-striped.table-hover
+				tr
+					th Caracteristicas
+					th
+				tr
+					td Extension de archivo
+					td 
+						p *.html
+						p *.htm
+				tr
+					td Tipo de codigo
+					td Texto
+				tr
+					td Tipo de formato
+					td Lenguaje de marcado
+				tr
+					td Año de lanzamiento
+					td 1963
+				
+		div.col-5
+			table.table.table-striped.table-hover
+				tr
+					th Siglas
+					th
+				tr
+					td *
+					td Lenguaje de Marcado de HiperTexto
+				tr
+					td H
+					td Hyper
+				tr
+					td T
+					td Text
+				tr
+					td M
+					td Markup
+				tr
+					td L
+					td Language
+		
+	
+		

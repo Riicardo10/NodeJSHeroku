@@ -1,0 +1,23 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Vistas.
+			p Las vistas en Laravel son la parte pública que el usuario de nuestro sistema va a poder ver, se escriben en HTML junto con un motor de plantillas llamado Blade. Las vistas se encuentran ubicadas en la carpeta resources/views.
+			p Para desplegar una vista cuando el usuario entre a una ruta configurada en nuestro archivo de rutas, debemos modificar nuestro archivo de rutas.
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+		div.col-10
+			h3 Blade.
+			p Blade nos provee de muchas ventajas, además de modularizar nuestras vistas de una forma sorprendente, tambien nos permite usar estructuras de control y variables de PHP directamente en ellas.
+			p Para poner código php en nuestro archivo .blade.php, sólo se usan dos pares de llaves {{ }}, lo cual equivale a 
+				b <
+				b ?
+				b php ... 
+				b ?
+				b >.
+			p Para desplegar una vista Blade con parámetros, en nuestro archivo de rutas, debemos modificar nuestro archivo de rutas.

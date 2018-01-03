@@ -1,0 +1,95 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 PRACTICA 3 - Rutas con parametros.
+			ol
+				li En el CMD, nos posicionamos en el directorio sobre el cual crearemos el proyecto Laravel. (>cd + directorio).
+				li Crear proyecto Laravel con los comandos de Composer.
+					br
+					p.parrafo-centrado
+						i > composer create-project laravel/laravel practica_3 --prefer-dist
+				li Nos posicionamos sobre el directorio en el que se creó el proyecto (>cd + directorio).
+				li Revisamos que los archivos y carpetas que genera Composer las haya creado correctamente.
+					img(src="/img/186.png" width=800)
+					br
+				li Modificamos la ruta / del archivo web.php, y en la función asignamos el código que se ejecutará cuando el usuario entre a esta ruta, la cual retorna una vista con un arreglo como parámetro.
+					img.practicas(src="/img/199.png" width=400)
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1 → *
+							td Inicio y cierre del script en PHP.
+						tr
+							td 2 → 12
+							td Definicion de la ruta /persona por el método GET.
+						tr
+							td 3
+							td Creacion de un arreglo nombrado $lista_hermanos, le asignamos 3 valores.
+						tr
+							td 4 → 11
+							td Respuesta del servidor. Retornamos la vista persona.blade.php, a la cual le mandamos como parámetro un array asociativo con las claves titulo, nombre, apellidos, lista_hermanos. 
+				li Creamos un archivo de vista en el directorio resources/views nombrado persona.blade.php.
+				li Agregamos el siguiente código (HTML + PHP).
+					center
+						img(src="/img/200.png" width=400)
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Declaración del DOCTYPE, indica el tipo de documento que interpretará el navegador, en este caso es un documento HTML.
+						tr
+							td 2 → 15
+							td Inicio y cierre del documento HTML.
+						tr
+							td 3 → 5
+							td Declaración del head, cabecera del documento HTML.
+						tr
+							td 4
+							td 
+								p Título (title) de la página HTML.
+								p Contiene una expresión {{}}, la cual es un script PHP, al < title > se le asigna el valor de la variable $titulo que se envió desde la ruta /persona.
+						tr
+							td 6 → 14
+							td Inicio y cierre del body (cuerpo) del documento HTML.
+						tr
+							td 7
+							td Definicion de un encabezado tipo < h3 >
+						tr
+							td 8
+							td 
+								p Definición de un bloque de texto tipo párrafo.
+								p Contiene una expresión {{}}, la cual es un script PHP, al < p > se le asigna el valor de la variable $nombre que se envió desde la ruta /persona.
+						tr
+							td 9
+							td 
+								p Definición de un bloque de texto tipo párrafo.
+								p Contiene una expresión {{}}, la cual es un script PHP, al < p > se le asigna el valor de la variable $apellidos que se envió desde la ruta /persona.
+						tr
+							td 10
+							td Definicion de un encabezado tipo < h3 >
+						tr
+							td 11 → 13
+							td Definicion de un bucle tipo for, recorre la lista que se le envió desde la ruta /persona.
+						tr
+							td 12
+							td 
+								p Definición de un bloque de texto tipo párrafo.
+								p Contiene una expresión {{}}, la cual es un script PHP, al < p > se le asigna el valor de la variable $lista_hermanos que va iterando el bucle for.
+				li Corremos el servidor haciendo uso de artisan. (El servidor corre por el puerto 8000 en nuestro localhost)
+					p.parrafo-centrado
+						i > php artisan serve
+					br
+				li Abrimos el navegador en la ruta que definimos en nuestro archivo de rutas (/persona) para ver la vista con la que nos responde la ruta.
+					br
+					center
+						img(src="/img/202.png" widt=700 width=700)

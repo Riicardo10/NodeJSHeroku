@@ -1,0 +1,88 @@
+center
+	h1.subencabezado(onclick="ocultarBootstrap()" title="Mostrar/Ocultar" style="cursor:pointer;background:#248; color:white;") Bootstrap 4
+div.row#bootstrap
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="GET" action="/bootstrap")
+					input.btn.btn-link(type="submit" value="Concepto" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/bootstrap/grid")
+					input.btn.btn-link(type="submit" value="Sistema de grid" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/bootstrap/tablas")
+					input.btn.btn-link(type="submit" value="Tablas" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/bootstrap/imagenes")
+					input.btn.btn-link(type="submit" value="Imagenes" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/bootstrap/botones")
+					input.btn.btn-link(type="submit" value="Botones" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/bootstrap/paginacion")
+					input.btn.btn-link(type="submit" value="Paginacion" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/bootstrap/formularios")
+					input.btn.btn-link(type="submit" value="Formularios" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/bootstrap/referencias")
+					input.btn.btn-link(type="submit" value="Referencias" style="color: black;")
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<style type='text/css'>\n\t\t\t.bloque{\n\t\t\t\tmargin-left: 50px;\n\t\t\t\tmargin-bottom: 20px;\n\t\t\t\tmargin-top: 30px;\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<div class='row bloque'>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-2'>\n\t\t\t\t<p> Bloque de texto... </p>\t\n\t\t\t</div>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-2'>\n\t\t\t\t<p> Bloque de texto... </p>\t\n\t\t\t</div>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-2'>\n\t\t\t\t<p> Bloque de texto... </p>\t\n\t\t\t</div>\n\t\t</div>\n\t\t<div class='row bloque'>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-2'>\n\t\t\t\t<p> Bloque de texto... </p>\n\t\t\t</div>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-2'>\n\t\t\t\t<p> Bloque de texto... </p>\t\n\t\t\t</div>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-2'>\n\t\t\t\t<p> Bloque de texto... </p>\t\n\t\t\t</div\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 1" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<style type='text/css'>\n\t\t\t.centrado{\n\t\t\t\ttext-align: center;\n\t\t\t}\n\t\t\t.encabezado{\n\t\t\t\tbackground: #248;\n\t\t\t\tcolor: white;\n\t\t\t\tpadding: 10px;\n\t\t\t}\n\t\t\timg{\n\t\t\t\twidth: 100px;\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<h1 class='encabezado centrado'>CSS</h1>\n\t\t<div class='row'>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-10'>\n\t\t\t\t<h4>Concepto:</h4>\n\t\t\t\t<p>\n\t\t\t\t\tParrafo...\n\t\t\t\t</p>\n\t\t\t\t<div align='center'>\n\t\t\t\t\t<img src='http://soyfrontend.com/wp-content/uploads/2017/06/tutoriales-de-css.jpg' class='rounded-circle'>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class='col-1'></div>\n\t\t</div>\n\t</body>\n<html>")
+					input.btn.btn-link(type="submit" value="Practica 2" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t</head>\n\t<body style='margin-top: 30px;'>\n\t\t<div class='row'>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<table class='table table-striped'>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t<th>Apellidos</th>\n\t\t\t\t\t\t<th>Sexo</th>\n\t\t\t\t\t\t<th>Escolaridad</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Lucas</td>\n\t\t\t\t\t\t<td>Estrada</td>\n\t\t\t\t\t\t<td>Masculino</td>\n\t\t\t\t\t\t<td>Bachillerato</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>David</td>\n\t\t\t\t\t\t<td>Figueroa</td>\n\t\t\t\t\t\t<td>Masculino</td>\n\t\t\t\t\t\t<td>Licenciatura</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Alejandra</td>\n\t\t\t\t\t\t<td>García</td>\n\t\t\t\t\t\t<td>Femenino</td>\n\t\t\t\t\t\t<td>Licenciatura</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Diego</td>\n\t\t\t\t\t\t<td>Bello</td>\n\t\t\t\t\t\t<td>Masculino</td>\n\t\t\t\t\t\t<td>Secundaria</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 3" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<style type='text/css'>\n\t\t\t.item{\n\t\t\t\tcolor: black;\n\t\t\t\tfont-family: unset;\n\t\t\t}\n\t\t\t.centrado{\n\t\t\t\ttext-align: center;\n\t\t\t}\n\t\t\t.encabezado{\n\t\t\t\tbackground: #248;\n\t\t\t\tcolor: white;\n\t\t\t\tpadding: 10px;\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<h1 class='encabezado centrado'>TECNOLOGIA</h1>\n\t\t<div class='row'>\n\t\t\t<div class='col-1'></div>\n\t\t\t<div class='col-5 centrado'>\n\t\t\t\t<h3>Ventajas:</h3>\n\t\t\t\t<ul>\n\t\t\t\t\t<li class='list-group-item list-group-item-success item'>Ventaja 1 </li>\n\t\t\t\t\t<li class='list-group-item list-group-item-success item'>Ventaja 2</li>\n\t\t\t\t\t<li class='list-group-item list-group-item-success item'>Ventaja 3</li>\n\t\t\t\t\t<li class='list-group-item list-group-item-success item'>Ventaja 4</li>\n\t\t\t\t\t<li class='list-group-item list-group-item-success item'>Ventaja 5</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class='col-5 centrado'>\n\t\t\t\t<h3>Desventajas:</h3>\n\t\t\t\t<ul>\n\t\t\t\t\t<li class='list-group-item list-group-item-danger item'>Desventaja 1</li>\n\t\t\t\t\t<li class='list-group-item list-group-item-danger item'>Desventaja 2</li>\n\t\t\t\t\t<li class='list-group-item list-group-item-danger item'>Desventaja 3</li>\n\t\t\t\t\t<li class='list-group-item list-group-item-danger item'>Desventaja 4</li>\n\t\t\t\t\t<li class='list-group-item list-group-item-danger item'>Desventaja 5</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t\t<div class='col-3'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 4" style="color: black;")
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<style type='text/css'>\n\t\t\t.centrado{\n\t\t\t\ttext-align: center;\n\t\t\t}\n\t\t\t.encabezado{\n\t\t\t\tbackground: #248;\n\t\t\t\tcolor: white;\n\t\t\t\tpadding: 10px;\n\t\t\t}\n\t\t\timg{\n\t\t\t\twidth: 100px;\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<h1 class='encabezado centrado'>TECNOLOGIAS WEB</h1>\n\t\t<div class='row'>\n\t\t\t<div class='col-4'></div>\n\t\t\t<div class='col-4' align='center'>\n\t\t\t\t<h3 class='centrado'>HTML</h3>\n\t\t\t\t<p>\n\t\t\t\t\tBloque de texto...\n\t\t\t\t</p>\n\t\t\t\t<img class='img-thumbnail' src='http://michelletorres.mx/wp-content/uploads/2012/08/html5_logo.png'>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t\t<div class='row'>\n\t\t\t<div class='col-2'></div>\n\t\t\t<div class='col-4' align='center'>\n\t\t\t\t<h3 class='centrado'>CSS</h3>\n\t\t\t\t<p>\n\t\t\t\t\tBloque de texto...\n\t\t\t\t</p>\n\t\t\t\t<img class='img-thumbnail' src='https://png.icons8.com/ios/2x//css-filetype.png'>\n\t\t\t</div>\n\t\t\t<div class='col-4' align='center'>\n\t\t\t\t<h3 class='centrado'>JavaScript</h3>\n\t\t\t\t<p>\n\t\t\t\t\tBloque de texto...\n\t\t\t\t</p>\n\t\t\t\t<img class='img-thumbnail' src='http://www.cantabriatic.com/wp-content/uploads/2015/06/javascript-100x100.png'>\n\t\t\t</div>\n\t\t</div>\n\t</body>\n</html>")
+					input.xd.btn.btn-link(type="submit" value="Practica 5" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<style type='text/css'>\n\t\t\t.btn{\n\t\t\t\twidth: 38px;\n\t\t\t}\n\t\t\tinput[type=number]{\n\t\t\t\tbackground: black;\n\t\t\t\tcolor: #3f3;\n\t\t\t\ttext-align: center;\n\t\t\t\tpadding: 4px;\n\t\t\t\tfont-family: serif;\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<div class='row' style='margin-top: 30px;'>\n\t\t\t<div class='col-3'></div>\n\t\t\t<div class='col-4' align='center'>\n\t\t\t\t<table>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td colspan='5'><input type='number' value='33443'></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td><input type='button' value='1' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='2' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='3' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='+' class='btn btn-success'></td>\n\t\t\t\t\t\t<td><input type='button' value='*' class='btn btn-success'></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td><input type='button' value='4' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='5' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='6' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='/' class='btn btn-success'></td>\n\t\t\t\t\t\t<td><input type='button' value='-' class='btn btn-success'></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td><input type='button' value='7' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='8' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='9' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='0' class='btn btn-info'></td>\n\t\t\t\t\t\t<td><input type='button' value='=' class='btn btn-success'></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td><input type='button' value='C' class='btn btn-danger'></td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 6" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t</head>\n\t<body>\n\t\t<div class='row' style='margin-top: 30px;'>\n\t\t\t<div class='col-2'></div>\n\t\t\t<div class='col-4'>\n\t\t\t\t<form>\n\t\t\t\t\t<table>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label>Introduce nombre:</label></td>\n\t\t\t\t\t\t\t<td><input type='text'></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label>Introduce apellido:</label></td>\n\t\t\t\t\t\t\t<td><input type='text'></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td><label>Introduce sexo:</label></td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<select class='form-control'>\n\t\t\t\t\t\t\t\t\t<option>Masculino</option>\n\t\t\t\t\t\t\t\t\t<option>Femenino</option>\n\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td></td>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t<input type='submit' class='btn btn-danger' value='Reset'>\n\t\t\t\t\t\t\t\t<input type='submit' class='btn btn-success'>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</table>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 7" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editor")
+					input(type='hidden' name='txt_codigo' value="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>Ejercicio</title>\n\t\t<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>\n\t\t<style type='text/css'>\n\t\t\t.bloque{\n\t\t\t\tmargin-top: 30px;\n\t\t\t}\n\t\t\t#encabezado{\n\t\t\t\ttext-align: center;\n\t\t\t\tmargin-top: 30px;\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<h1 id='encabezado'>Envio de email</h1>\n\t\t<div class='row bloque'>\n\t\t\t<div class='col-3'></div>\n\t\t\t<div class='col-4' align='center'>\n\t\t\t\t<table>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td><label>Introduce email:</label></td>\n\t\t\t\t\t\t<td><input type='email' name=''></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td><label>Mensaje a enviar:</label></td>\n\t\t\t\t\t\t<td><textarea cols='22' rows='6'></textarea></td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td></td>\n\t\t\t\t\t\t<td><input type='submit' class='btn btn-success'></td>\n\t\t\t\t\t</tr>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t\t<div class='col-4'></div>\n\t\t</div>\n\t</body>\n</html>")
+					input.btn.btn-link(type="submit" value="Practica 8" style="color: black;")
+script.
+	var bandera_bootstrap = true
+	function ocultarBootstrap(){	
+		document.getElementById('bootstrap').hidden = bandera_bootstrap
+		bandera_bootstrap = !bandera_bootstrap
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

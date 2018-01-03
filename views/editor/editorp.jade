@@ -1,0 +1,87 @@
+extends ../layout/contenido_editor
+block editor
+	section.container
+		form(action='/p' method='post' accept-charset='utf-8' target='resultado' onsubmit='')
+			img.bot(src="img/icon-index.png" onclick="inicio()" width=32 title='Inicio')
+			img.bot(src="img/d.png" onclick="guardarArchivoHTML()" width=32 title='Descargar codigo')
+			img.bot(src="img/icon-archivo.png" onclick="limpiarArea()" width=32 title='Limpiar area de texto')
+			input.btn.botones_editor.bot(type='submit' title='Ejecutar' value='' style='background:url("img/play.png") left center no-repeat; padding:22px;')
+			br
+			div(style="border:.1px solid black;" )
+				textarea(name='editor' id='editor' style="overflow:auto; border:solid 1px black;")
+			input(type='hidden' name='php' id='php' width="100" readonly value=codigo_php )
+			input(type='hidden' name='js' id='js' value=codigo_js)
+block resultado
+	section.container
+		br
+		div(style='background:white; border:.1px solid black;')
+			iframe( frameborder="0" name="resultado" width="100%" height="400px")
+	script.
+		document.getElementById('editor').value = document.getElementById('php').value
+		document.getElementById('php').value = ""
+
+
+		function inicio(){
+			location.href = "/";
+		}
+		function limpiarArea(){
+			location.href = "/editor";
+		}
+		function guardarArchivoHTML(){
+			var texto = document.getElementById("editor").value
+			//if( texto ){
+			var texto_blob = new Blob([texto], {type:'text/plain'})
+			var nombre_archivo = "archivo_html.txt"
+			var link = document.createElement("a")
+			link.download = nombre_archivo
+			link.innerHTML = "My Hidden Link"
+			window.URL = window.URL || window.webkitURL
+			link.href = window.URL.createObjectURL(texto_blob)
+			link.onclick = destroyClickedElement
+			link.style.display = "none"
+			document.body.appendChild(link)
+			link.click()
+			swMensajeExitoso('Bieeen!', 'Archivo guardado en tu equipo.')
+			/*}
+			else
+				swMensajeError('Error', 'Escribe codigo HTML + CSS + JS.')*/
+		}
+		function destroyClickedElement(event) {
+			document.body.removeChild(event.target);
+		}
+		function validar(){
+			var dato = document.getElementById("editor").value
+			alert(dato)
+			if( document.getElementById("editor").value)
+				return true;
+			else
+				swMensajeError('Error', 'Escribe codigo HTML + CSS + JS.')
+			return false
+		}
+		// poner focus a textarea
+		//document.getElementById('editor').focus()
+		// tabulador al textarea
+		document.querySelector("textarea").addEventListener('keydown',function(e) {
+			if(e.keyCode === 9) {
+				var start = this.selectionStart
+				var end = this.selectionEnd
+				var target = e.target
+				var value = target.value
+				target.value = value.substring(0, start) + "\t" + value.substring(end)
+				this.selectionStart = this.selectionEnd = start + 1
+				e.preventDefault();
+			}
+		}, false);
+		
+		function colorcoding() {
+			var ua = navigator.userAgent;
+			if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+			window.editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+				mode: "text/html",
+				htmlMode: true,
+				lineWrapping: true,
+				smartIndent: false,
+				addModeClass: true
+			});
+		}
+		colorcoding();

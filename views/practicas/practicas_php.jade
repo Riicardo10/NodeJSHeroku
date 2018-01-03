@@ -1,0 +1,103 @@
+center
+	h1.subencabezado(onclick="ocultarPHP()" title="Mostrar/Ocultar" style="cursor:pointer;background:#248; color:white;") PHP
+div.row#php
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="GET" action="/php")
+					input.btn.btn-link(type="submit" value="Concepto" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/php/sintaxis")
+					input.btn.btn-link(type="submit" value="Sintaxis" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/php/datos")
+					input.btn.btn-link(type="submit" value="Tipos de datos" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/php/flujo")
+					input.btn.btn-link(type="submit" value="Control de flujo" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/php/arreglos")
+					input.btn.btn-link(type="submit" value="Arreglos" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/php/funciones")
+					input.btn.btn-link(type="submit" value="Funciones" style="color: black;")
+			li.list-group-item
+				form(method="GET" action="/php/referencias")
+					input.btn.btn-link(type="submit" value="Referencias" style="color: black;")
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php\n\t$nombre = $REQUEST['txt_nombre']\n\techo '<h3>Hola $nombre</h3>';\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<html><head><meta charset='UTF-8'><title>Document</title></head><body><input type='text' id='nombre'><input type='button' onclick='saludar()' value='Enviar' placeholder='Introduce nombre:'></body><script>function saludar(){nombre = document.getElementById('nombre').value;document.write('<h3>Hola: '  + nombre + '</h3>');}</script></html>")
+					input.btn.btn-link(type="submit" value="Practica 1" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php\n\tfunction mayorDeEdad($edad){\n\t\tif($edad >= 18)\n\t\t\techo '<h3>Eres mayor de edad</h3>';\n\t\telse\n\t\t\techo '<h3>Aun no eres mayor de edad</h3>';\n\t\t\t\t$edad = $_REQUEST['txt_edad'];\n\t\tmayorDeEdad($edad);\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<html><head><meta charset='UTF-8'><title>Document</title></head><body><input type='number' id='numero' placeholder='Introduce edad:'><input type='button' onclick='validar()' value='Enviar'></body><script>function validar(){numero = document.getElementById('numero').value;if(numero > 18){document.write('<h3>Hola: '  + 'Ya eres mayor de edad' + '</h3>');}else{document.write('<h3>Hola: '  + 'Aun no eres mayor de edad' + '</h3>');}}</script></html>")
+					input.btn.btn-link(type="submit" value="Practica 2" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php \n\t$usuario = $_POST['txt_usuario'];\n\t$contrasenia = $_POST['txt_contrasenia'];\n\tif($usuario == 'Admin' && $contrasenia == '1234'){\n\t\techo '<h3>Acceso autorizado</h3>';\n\t\techo '<h3>Bienvenido Administrador</h3>';\n\t}\n\telse{\n\t\techo '<h3>Acceso denegado</h3>';\n\t\techo '<h3>Intenta de nuevo</h3>';\n\t}\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<html><head><meta charset='UTF-8'><title>Document</title></head><body><input type='text' id='user' placeholder='Introduce usuario:'><input type='text' id='password' placeholder='Introduce contrasenia:'><input type='button' onclick='validar()' value='Enviar'></body><script>function validar(){usuario = document.getElementById('user').value;	contra = document.getElementById('password').value;if(usuario == 'Admin' && contra == '1234'){document.write('<h3>Acceso autorizado</h3>');document.write('<h3>Bienvenido administrador</h3>');}else{document.write('<h3>Acceso denegado</h3>');document.write('<h3>Intenta de nuevo</h3>');}}</script></html>")
+					input.btn.btn-link(type="submit" value="Practica 3" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php \n\t$animales = array('leon', 'tigre', 'pantera', 'lobo', 'elefante');\n\t$animal = strtolower($_REQUEST['txt_animal']);\n\t$existe = false;\n\tfor($i=0; $i<count($animales); $i++){\n\t\tif($animal == $animales[$i]){\n\t\t\t$existe = true;\n\t\t\tbreak;\n\t\t}\n\t}\n\tif($existe)\n\t\techo '<h3>Existe $animal en la lista de animales.</h3>';\n\telse\n\t\techo '<h3'>No existe animal en la lista.</h3>';\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<html><head><meta charset='UTF-8'><title>Document</title></head><body><input type='text' id='animal' placeholder='Introduce animal:'><input type='button' onclick='validar()' value='Enviar'></body><script>function validar(){animales = ['leon','tigre','pantera','elefante','lobo'];animal = document.getElementById('animal').value;existe = false;for(i=0; i<animales.length; i++){if(animal == animales[i]){existe = true;break;}}if(existe){document.write('<h3>Existe animal en la lista</h3>');}else{document.write('<h3>NO existe animal en la lista</h3>');}}</script></html>")
+					input.btn.btn-link(type="submit" value="Practica 4" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php \n\t$nombre = $_GET['txt_nombre'];\n\t$apellido = $_GET['txt_apellido'];\n\t$genero = $_GET['genero'];\n\t$filename = '';\n\tif($genero == 'Masculino')\n\t\t$filename = 'hombres.txt';\n\telse if($genero == 'Femenino')\n\t\t$filename = 'mujeres.txt';\n\t$fp = fopen($filename, 'a+');\n\tfputs($fp, $nombre.'');\n\tfputs($fp, $apellido.'');\n\tfclose($fp);\n\techo '<script>alert('Datos almacenados :)')</script>';\n\theader('Refresh:1; url=index.php');\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<html><head><meta charset='UTF-8'><title>Document</title></head><body><input type='text' id='nombre' placeholder='Introduce nombre:'><input type='text' id='apellido' placeholder='Introduce apellido:'><select name='sexo' id='sexo'><option value='Masculino'>Masculino</option><option value='Femenino'>Femenino</option></select><input type='button' onclick='validar()' value='Enviar' disabled=''><br><h2>Hombres:</h2><table><tr><td>Hombre 1</td></tr><tr><td>Hombre 2</td></tr><tr><td>Hombre 3</td></tr><tr><td>Hombre 4</td></tr></table><h2>Mujeres:</h2><table><tr><td>Mujer 1</td></tr><tr><td>Mujer 2</td></tr><tr><td>Mujer 3</td></tr><tr><td>Mujer 4</td></tr></table></body></html>")
+					input.xd.btn.btn-link(type="submit" value="Practica 5" style="color: black;")
+	div.col-4
+		ol.list-group
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php \n\t$matricula = $_GET['txt_matricula'];\n\t$filename = 'datos.txt';\n\t$mostrar = fopen($filename, 'r');\n\twhile(!feof($mostrar)){\n\t\t$matri = fgets($mostrar);\n\t\t$nombre = fgets($mostrar);\n\t\t$apellido = fgets($mostrar);\n\t\t$edad = fgets($mostrar);\n\t\tif($matricula . '' == $matri){\n\t\t\techo 'Matricula: $matricula <br>';\n\t\t\techo 'Nombre: $nombre <br>';\n\t\t\techo 'Apellido: $apellido <br>';\n\t\t\techo 'Edad: $edad <br>';\n\t\t\tbreak;\n\t\t}\n\t}\n\tfclose($mostrar);\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<html><head><meta charset='UTF-8'><title>Document</title></head><body><input type='text' id='a' placeholder='Introduce matricula:'><input type='text' id='nombre' placeholder='Introduce nombre:'><input type='text' id='apellido' placeholder='Introduce apellido:'><input type='number' id='edad' placeholder='Introduce edad:'><input disabled type='button' onclick='validar()' value='Enviar'><br><input type='text' id='matricula' placeholder='Introduce matricula a buscar:'><input type='button' onclick='buscar()' value='Buscar'><script>function buscar() {datos = [{'m':1, 'n':'Nombre 1', 'a':'Apellido 1', 'e':21}, {'m':2, 'n':'Nombre 2', 'a':'Apellido 2', 'e':43}, {'m':3, 'n':'Nombre 3', 'a':'Apellido 3', 'e':66}];matricula = document.getElementById('matricula').value;for (var i = 0; i < datos.length; i++) {if(matricula == datos[i].m){document.write('Matricula: ' + matricula + '<br>');document.write('Nombre: ' + datos[i].n + '<br>');document.write('Apellido: ' + datos[i].a + '<br>');document.write('Edad: ' + datos[i].e + '<br>');}}}</script></body></html>")
+					input.btn.btn-link(type="submit" value="Practica 6" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php\n\t$ruta_imagenes_subidas = 'uploads/';\n\t$archivo = $ruta_imagenes_subidas . basename($_FILES['imagen']['name']);\n\tif (move_uploaded_file($_FILES['imagen']['tmp_name'], $archivo)) \n\t\techo '-> El archivo '. basename( $_FILES['imagen']['name']). ' se subio exitosamente al servidor.';\n\telse \n\t\techo 'Ocurrio un error en la subida';?>")
+					input(type='hidden' name='txt_codigo_js' value="<html><head><meta charset='UTF-8'><title>Document</title></head><body><p>Selecciona la imagen a subir al servidor <input type='file' name='' id=''> <input type='button' value='Enviar' onclick='validar()'></p></body><script>function validar(){alert('Bien hecho!')}</script></html>")
+					input.btn.btn-link(type="submit" value="Practica 7" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php \n\t$nombre = $_REQUEST['txt_nombre'];\n\t$apellidos = $_REQUEST['txt_apellidos'];\n\tinclude('conexion_db.php');\n\tmysqli_query($conexion, 'insert into personas(nombre, apellidos) values ('$nombre', '$apellidos')');\n\tif(mysqli_affected_rows($conexion) == 0)\n\t\techo '<br>Error al registrar.';\n\telse\n\t\techo '<br>Registrado correctamente.';\n\theader('Refresh:1; url=index.php');\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<!DOCTYPE html><html><head><title>Practica</title></head><body><input type='text' name='txt_nombre' placeholder='Introduce nombre.'><input type='text' name='txt_apellidos' placeholder='Introduce apellidos.'><input type='button' value='Enviar' disabled=''><div><table><tr><td>1</td><td>Persona1</td><td>Apellido 1</td></tr><tr><td>1</td><td>Persona2</td><td>Apellido 2</td></tr><tr><td>1</td><td>Persona3</td><td>Apellido 3</td></tr><tr><td>1</td><td>Persona4</td><td>Apellido 4</td></tr></table></div></body></html>")
+					input.btn.btn-link(type="submit" value="Practica 8" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php \n\t$id = $_REQUEST['txt_id'];\n\tinclude('conexion_db.php');\n\tmysqli_query($conexion, 'delete from personas where id =$id');\n\tif(mysqli_affected_rows($conexion) == 0)\n\t\techo '<br>Error al eliminar.';\n\telse\n\t\techo '<br>Eliminado correctamente.';\n\theader('Refresh:1; url=index.php');\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<!DOCTYPE html><html><head><title>Practica</title></head><body><input type='text' name='txt_nombre' placeholder='Introduce id a eliminar.'><input type='button' value='Eliminar' disabled=''><div><table><tr><td>1</td><td>Persona1</td><td>Apellido 1</td></tr><tr><td>1</td><td>Persona2</td><td>Apellido 2</td></tr><tr><td>1</td><td>Persona3</td><td>Apellido 3</td></tr><tr><td>1</td><td>Persona4</td><td>Apellido 4</td></tr></table></div></body></html>")
+					input.btn.btn-link(type="submit" value="Practica 9" style="color: black;")
+			li.list-group-item
+				form(method="POST" action="/editorp")
+					input(type='hidden' name='txt_codigo_php' value="<?php \n\t$usuario = $_POST['txt_usuario'];\n\t$contrasenia = $_POST['txt_contrasenia'];\n\t$contrasenia_encriptada = password_hash($contrasenia, PASSWORD_DEFAULT);\n\tinclude('conexion_db.php');\n\techo '$usuario $contrasenia $contrasenia_encriptada';\n\tmysqli_query($conexion, 'insert into usuarios(usuario, contrasenia) values ('$usuario', '$contrasenia_encriptada')');\n\tif(mysqli_affected_rows($conexion) == 0)\n\t\techo '<br>Error al registrar.';\n\telse\n\t\techo '<br>Registrado correctamente.';\n\theader('Refresh:1; url=index.html');\n?>")
+					input(type='hidden' name='txt_codigo_js' value="<!DOCTYPE html><html><head><title>Practica</title></head><body><form action='servidor.php' method='POST'><input type='text' name='txt_usuario' placeholder='Introduce usuario.'><input type='text' name='txt_contrasenia' placeholder='Introduce contrasenia.'><input type='button' disabled value='Agregar'></form><div><table><tr><td>1</td><td>Usuario 1</td><td>$2y$10$nw3hhcCi8pc2QlNZxs1qy</td></tr><tr><td>2</td><td>Usuario 2</td><td>$2y$10$qJRG9uoYLXgVqJRG9uyakT</td></tr><tr><td>3</td><td>Usuario 3</td><td>$2y$10$vDnIOw5bUsTFdE.Ljgl6y</td></tr></table></div></body></html>")
+					input.btn.btn-link(type="submit" value="Practica 10" style="color: black;")
+script.
+	var bandera_php = true
+	function ocultarPHP(){	
+		document.getElementById('php').hidden = bandera_php
+		bandera_php = !bandera_php
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

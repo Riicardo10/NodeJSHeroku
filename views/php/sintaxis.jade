@@ -1,0 +1,44 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Sintaxis
+			a(href="http://php.net/manual/es/language.basic-syntax.php") Documentacion oficial de PHP / Sintaxis
+	div.row(style="margin-bottom:1%;")
+		div.col-2
+		div.col-8
+			h3 Delimitadores
+			p El intérprete de PHP solo ejecuta el código que se encuentra entre sus delimitadores. Los cuales son: 
+			center
+				p 
+					b <
+					b ?
+					b php
+				p 
+					b CODIGO
+				p 
+					b ?
+					b >
+	div.row(style="margin-bottom:1%;")
+		div.col-2
+		div.col-8
+			h3 Puntos y comas
+			p Las sentencias en PHP deben acabar con punto y coma.
+	div.row(style="margin-bottom:1%;")
+		div.col-2
+		div.col-8
+			h3 Comentarios
+			p Los comentarios en PHP pueden ser de bloque o de línea. 
+			a(href="http://php.net/manual/es/language.basic-syntax.comments.php") Documentacion oficial de PHP / Comentarios
+	div.row(style="margin-bottom:10%;")
+		div.col-2
+		div.col-8
+			h3 Palabras reservadas
+			center
+				img(src="https://i.stack.imgur.com/dd7HD.png" width="500")
+			br
+			a(href="http://php.net/manual/es/reserved.keywords.php") Documentacion oficial de PHP / Palabras reservadas

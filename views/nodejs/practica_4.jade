@@ -1,0 +1,295 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 PRACTICA 4 - CRUD Node.js + MySQL
+			h5 Desarrollar una aplicación CRUD en Nodejs.
+			ol
+				li En el CMD, nos posicionamos en el directorio sobre el cual crearemos el proyecto Laravel. (>cd + directorio).
+				li Crear el directorio en el equipo donde será creado el proyecto Nodejs.
+				li Nos posicionamos sobre el directorio en el que se creó el proyecto (>cd + directorio).
+				li Importamos el modulo Express para manejar las rutas.
+					p.parrafo-centrado
+						i > npm install express -s
+					br
+				li Importamos el modulo de body-parser.
+					p.parrafo-centrado
+						i > npm install body-parser -s
+					br
+				li Importamos el modulo de express-myconnection.
+					p.parrafo-centrado
+						i > npm install express-myconnection -s
+					br
+				li Importamos el modulo de mysql.
+					p.parrafo-centrado
+						i > npm install mysql -s
+					br
+				li Importamos el modulo de Jade para crear la vista de la aplicación.
+					p.parrafo-centrado
+						i > npm install jade -s
+					br
+				li Revisamos que los archivos/carpetas de la importación del modulo que genera el NPM Express se hayan creado correctamente.
+					img.practicas(src="/img/240.png")
+					br
+				li Crearemos una base de datos de nombre practicas y con instrucciones SQL, crearemos una tabla nombrada personas con la siguiente estructura.
+					p.parrafo-centrado
+						i > desc personas;
+					br
+				li Dentro del proyecto Node.js creamos las siguientes carpetas y archivos, de tal modo que nos quede el directorio con la siguiente estructura.
+					img.practicas(src="/img/268.png")
+					br
+				li Empezaremos por la carpeta models, en la cual crearemos nuestro archivo de conexión a la base de datos. Crearemos un archivo nombrado conexion.js y lo modificamos de la siguiente manera.
+					img.practicas(src="/img/269.png")
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Creamos una variable nombrada mysql y le asignamos el módulo NPM mysql.
+						tr
+							td 2
+							td Creamos una variable nombrada my_connection y le asignamos el módulo NPM express-myconnection.
+						tr
+							td 3 → 9
+							td Creamos una variable nombrada db_data y le asignamos un objeto JSON con los valores de configuracion de la base de datos.
+						tr
+							td 4
+							td Indicamos el host de la base de datos.
+						tr
+							td 5
+							td Indicamos el puerto en el que correrá la aplicación.
+						tr
+							td 6
+							td Indicamos el usuario de nuestra base de datos.
+						tr
+							td 7
+							td Indicamos la contraseña de nuestra base de datos.
+						tr
+							td 8
+							td Indicamos el nombre de nuestra base de datos.
+						tr
+							td 10
+							td Creamos una variable nombrada Personas y le asignamos una función del módulo express-myconnection, le pasamos como parámetro el módulo de mysql, los datos de conexión y el tipo de conexión.
+						tr
+							td 11
+							td Exportamos el archivo como un módulo para que otros archivos puedan usarlo.
+				li En la carpeta /public van los recursos de la aplicación, como archivos .js, .css o imágenes. En esta practica no ocuparemos esos recursos.
+				li En la carpeta /routes crearemos un archivo nombrado index.js en el cual definiremos la rutas. Modificamos el archivo index.js, agregando las rutas del CRUD.
+					center
+						table
+							tr
+								td
+									img.practicas(src="/img/270a.png")
+							tr
+								td
+									img.practicas(src="/img/270b.png")
+							tr
+								td
+									img.practicas(src="/img/270c.png")
+							tr
+								td
+									img.practicas(src="/img/270d.png")
+							tr
+								td
+									img.practicas(src="/img/270e.png")
+					br
+				li Dentro de la carpeta /views creamos un archivo index.jade el cual será la vista que retornará el servidor cuando el usuario entre a la ruta raíz (/). Modificamos el archivo index.jade.
+					img.practicas(src="/img/271.png")
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Declaración del doctype, tipo de documento que interpretará el navegador web /html.
+						tr
+							td 2
+							td Declaracion del inicio del documento /html
+						tr
+							td 3
+							td Declaración del head, cabecera del documento /html.
+						tr
+							td 4
+							td Título (title) de la página /html, le asignamos el valor del parámetro nombrado titulo que se envía del servidor.
+						tr
+							td 5
+							td Inicio del cuerpo del documento /html
+						tr
+							td 6
+							td Estructura if, se ejecuta si la lista que se mandó desde el servidor tiene elementos.
+						tr
+							td 7
+							td Definicion de una tabla.
+						tr
+							td 8
+							td Definicion de una columna tr.
+						tr
+							td 9 → 13
+							td Definicion de los encabezados de la tabla.
+						tr
+							td 12
+							td Declaracion de un formulario que se envía con el método GET a la ruta /agregar/persona
+						tr
+							td 13
+							td Declaración de un botón tipo submit que servirá para enviar el formulario.
+						tr
+							td 14
+							td Estructura for, recorre la lista que se mandó desde el servidor.
+						tr
+							td 15
+							td Definición de una columna tr por cada registro que se itera.
+						tr
+							td 16 → 23
+							td Definición de celdas donde se mostrarán los campos de los registros de la tabla de la base de datos.
+						tr
+							td 24 → 28
+							td Definición de un script.
+						tr
+							td 25
+							td Definición de una función nombrada eliminar() a la cual le pasamos como parámetro un dato el cual será el id que seleccionemos de la tabla.
+						tr
+							td 26
+							td Definición de una variable nombrada eliminar, le asignamos el valor de la función confirm() para confirmar si se eliminará el registro seleccionado.
+						tr
+							td 27
+							td Retorno de la función eliminar(), si se confirma la eliminación del registro, será eliminado de la base de datos, muestra los registros.
+						tr
+							td 29
+							td Estructura else, se ejecuta si la lista que se mandó desde el servidor no tiene elementos.
+						tr
+							td 30
+							td Definición de un bloque de texto tipo párrafo, el cual notifica que no existen registros en la base de datos.
+				li Dentro de la carpeta /views creamos un archivo agregar_persona.jade el cual será la vista que tendrá un formulario y se enviará mediante el método POST para agregar el registro a la base de datos. Modificamos el archivo agregar_persona.jade
+					img.practicas(src="/img/272.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Declaración del doctype, tipo de documento que interpretará el navegador web /html.
+						tr
+							td 2
+							td Declaracion del inicio del documento /html
+						tr
+							td 3
+							td Declaración del head, cabecera del documento /html.
+						tr
+							td 4
+							td Título (title) de la página /html, le asignamos el valor del parámetro nombrado titulo que se envía del servidor.
+						tr
+							td 5
+							td Inicio del cuerpo del documento /html
+						tr
+							td 6
+							td Declaración de un formulario que se envía con el método POST a la ruta raíz.
+						tr
+							td 7
+							td Declaración de una etiqueta.
+						tr
+							td 8
+							td Declaración de un campo de texto nombrado persona_nombre.
+						tr
+							td 9
+							td Declaración de un botón tipo submit que servirá para enviar el formulario.
+				li Dentro de la carpeta /views creamos un archivo editar_persona.jade el cual será la vista que tendrá un formulario con los datos del registro que se editará y se enviará mediante el método POST para editar el registro a la base de datos. Modificamos el archivo editar_persona.jade.
+					img.practicas(src="/img/273.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Declaración del doctype, tipo de documento que interpretará el navegador web /html.
+						tr
+							td 2
+							td Declaracion del inicio del documento /html
+						tr
+							td 3
+							td Declaración del head, cabecera del documento /html.
+						tr
+							td 4
+							td Título (title) de la página /html, le asignamos el valor del parámetro nombrado titulo que se envía del servidor.
+						tr
+							td 5
+							td Inicio del cuerpo del documento /html
+						tr
+							td 6
+							td Declaración de un formulario que se envía con el método POST a la ruta /editar/:id.
+						tr
+							td 7
+							td Declaración de una etiqueta.
+						tr
+							td 8
+							td Declaración de un campo de texto nombrado persona_id.
+						tr
+							td 9
+							td Salto de línea.
+						tr
+							td 10
+							td Declaración de una etiqueta.
+						tr
+							td 11
+							td Declaración de un campo de texto nombrado persona_nombre.
+						tr
+							td 12
+							td Salto de línea.
+						tr
+							td 13
+							td Declaración de un botón tipo submit que servirá para enviar el formulario.
+				li En la raíz del proyecto crearemos un archivo nombrado app.js en el cual configuraremos los módulos que usará la aplicación y el servidor. Modificamos el archivo app.js.
+					img.practicas(src="/img/274.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Declaración de una variable nombrada express le asignamos el módulo NPM express().
+						tr
+							td 2
+							td Declaración de una variable nombrada body_parser le asignamos el módulo NPM body-parser().
+						tr
+							td 3
+							td Declaración de una variable nombrada routes le asignamos el módulo que exportamos del archivo index.js donde se encuentran las rutas.
+						tr
+							td 4
+							td Declaración de una variable nombrada public_dir indicamos que será una variable estática para acceder a los recursos de la aplicación.
+						tr
+							td 5
+							td Declaración de una variable nombrada view_dir indicamos la ruta para acceder a las vistas de la aplicación.
+						tr
+							td 6
+							td Declaración de una variable nombrada port le asignamos el valor numérico, el cual será el puerto donde corra la aplicación.
+						tr
+							td 7
+							td Creamos una variable nombrada app y le asignamos el valor que retorna la llamada al modulo express().
+						tr
+							td 8 → 15
+							td Establecemos el motor de plantillas (Jade) y los modulos que usará la aplicación.
+						tr
+							td 16 → 18
+							td Ejecución del servidor para que se encuentre activo para recibir peticiones de los usuarios.
+						tr
+							td 17
+							td Impresión en consola de que el servidor se encuentra en ejecución en el puerto indicado.
+				li Corremos el servidor haciendo uso de la instrucción > node *.js. (El servidor corre por el puerto 3000 en nuestro localhost).
+					p.parrafo-centrado
+						i > node app.js
+					br
+				li Abrimos el navegador en la ruta raíz (/) para ver la respuesta que nos arroja el servidor cuando entramos a esta ruta (Cabe señalar que se han agregado registros a la tabla de la base de datos para que se muestren). 
+					img.practicas(src="/img/276.png")
+					br
+					p Una vez dando clic en el botón editar, nos mandará a una nueva ruta /editar/:id y nos mostrará el formulario para que editemos al registro que seleccionamos.
+					img.practicas(src="/img/277.png")
+					br
+					p Una vez dando clic en el botón eliminar, nos mandará a una notificación si de verdad deseamos eliminar al registro seleccionado, si aceptamos; el registro será eliminado de la tabla de la base de datos.
+					img.practicas(src="/img/278.png")

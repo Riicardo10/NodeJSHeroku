@@ -1,0 +1,20 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Estructura.
+			p Todo documento HTML debe tener como mínimo las siguientes etiquetas.
+	div.row(style="margin-bottom:10%;")
+		div.col-3
+		div.col-6
+			ul
+				li Etiqueta para definir el tipo de formato del documento que interpretará el navegador web.
+				li Etiqueta para la cabecera de la página web.
+				li Etiqueta para dar un título a la página web.
+				li Etiqueta para importar hojas de estilo en cascada CSS.
+				li Etiqueta para importar archivos de programación JavaScript.
+				li Etiqueta del cuerpo del documento (en el cual se incluyen las demás etiquetas y todo el contenido del documento HTML).

@@ -1,0 +1,33 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Gestor NPM.
+			p El gestor NPM (Node Package Manager), es un manejador de dependencias o modulos para Node.js. NPM cuenta con una página en www.npmjs.com en la cual existen miles de paquetes que puedes instalar a tu proyecto Node de manera gratuita.
+			p Para usar NPM sólo basta con instalar Node.js, una vez que está instalado Node.js en tu computadora puedes hacer uso de NPM.
+			p Un paqueta en Node.js contiene los archivos necesarios de un módulo que se pueden incluir en el proyecto.
+			p Para descargar e instalar un paquete Node.js, basta con ir a la terminal (CMD), posicionarnos en la ruta del proyecto y escribir el comando
+			center
+				i npm install NOMBRE_PAQUETE
+			p Cuando se instala este paquete, NPM crea una carpeta llamada node_modules en la cual estarán instalados todos los paquetes descargados por NPM.
+			p Una vez descargado/instalado el paquete, este puede ser utilizado, basta con incluir el paquete con la instucción require(NOMBRE_PAQUETE) en el proyecto.
+			center
+				i var paquete = require('PAQUETE_DESCARGADO')
+			h5 Express
+			p Dentro de Node.js, existe un framework web escrito en JavaScript y alojado dentro del entorno de ejecución Node.js. Este módulo configura el entorno y realiza tareas comunes en desarrollo y publicación web.
+			p El uso más importante de express es el manejo de rutas, ya que son definitivamente la parte más importante de la aplicación. 
+			p Ejemplo de configuración de una ruta
+			center
+				i app.get('ruta', function(){ })
+			p En la cual especificamos
+			center
+				i app.VERBO('PATH', ACCION)
+			ul 
+				li El verbo puede ser GET, POST, DELETE, PUT.
+				li El path es la ruta que indica el usuario.
+				li La acción es el código a ejecutar cuando el usuario acceda a la ruta especificada.
+	

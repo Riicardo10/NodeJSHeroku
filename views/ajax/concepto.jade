@@ -1,0 +1,27 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Concepto.
+			p AJAX no es un lenguaje de programación, es una técnica para crear aplicaciones web interactivas, las cuales se ejecutan en el cliente, o sea, en el navegador web de los usuarios mientras mantienen una comunicación asíncrona con el servidor en segundo plano. De esta manera se pueden realizar cambios sobre las vistas del usuario, sin necesidad de tener que recargar la página, lo cual mejora la interactividad, velocidad y usabilidad en las aplicaciones. (Pérez, Introducción a AJAX)
+			p AJAX es una tecnología asíncrona, es decir; los datos son solicitados al servidor y se cargan en segundo plano sin interferir con la visualización ni el comportamiento de la página. Todo esto se lleva a cabo con JavaScript el cual efectúa las funciones de llamada de AJAX mientras que el acceso a los datos se realiza mediante XMLHttpRequest, el cual es un objeto disponible en los navegadores actuales.  (Sherekan, 2008).
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+		div.col-10
+			h3 Tecnologías incluidas en AJAX.
+			p AJAX combina cuatro tecnologías:
+			ul
+				li HTML y CSS para el diseño que acompaña a la información.
+				li Document Object Model (DOM) accedido con un lenguaje de scripting como JavaScript, para mostrar e interactuar dinámicamente con la información presentada.
+				li Objeto XMLHttpRequest, sirve para intercambiar datos de forma asíncrona con el servidor web.
+				li XML, el cual es un formato usado generalmente para la transferencia de datos solicitados al servidor, aunque también puede funcionar haciendo uso de texto plano u objetos JSON (notación de objetos de JavaScript).
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-5
+			img(src="http://michelletorres.mx/wp-content/uploads/2016/03/ajax.png")
+		div.col-5
+			p Algunos ejemplos/aplicaciones web en donde se usa AJAX son los mapas, búsquedas en tiempo real, chat, validación de formularios en tiempo real y procesamiento en segundo plano, aplicaciones de carro de compras, aplicaciones de correo electrónico, etc.

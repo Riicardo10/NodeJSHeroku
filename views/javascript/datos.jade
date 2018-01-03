@@ -1,0 +1,35 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Tipos de datos.
+			p Al nombrar las variables, no debe utilizar ninguna de las palabras reservadas de JavaScript como nombre de variable. 
+			p Los nombres de las variables JavaScript no deben comenzar con un número (0-9). Deben comenzar con una letra (a-z) o un carácter de subrayado (_).
+			p Los nombres de variables JavaScript distinguen entre mayúsculas y minúsculas. 
+	iv.row(style="margin-bottom:10%;")
+		div.col-3
+		div.col-6
+			table.table.table-striped.table-hover
+				tr
+					th Tipo
+					th Ejemplo
+				tr
+					td Numbers
+					td 133
+				tr
+					td Strings
+					td “Cadena”
+				tr
+					td Boolean
+					td true o false
+				tr
+					td Array
+					td [‘x’, y‘’, ‘z’]
+				tr
+					td Object
+					td {nombre:”Alan Figueroa”, edad:22}
+

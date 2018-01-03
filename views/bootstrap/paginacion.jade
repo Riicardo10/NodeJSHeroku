@@ -1,0 +1,15 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Paginacion.
+			p Para hacer uso de paginaciones en Bootstrap, se debe crear una lista no ordenada ul, con clase pagination, posteriormente dentro de la lista, crear los elementos li necesarios con su respectiva clase.
+			p En caso de querer agregar algún icono a un ítem de la lista este icono se debe agregar a un elemento tipo span, el cual hace definición a un contenedor de media.
+			center
+				img(src="https://blackfyre.ninja/storage/Headline%20images/Bootstrap-Paginator.jpg" width="500")
+			br
+			a(href="https://v4-alpha.getbootstrap.com/components/pagination/") Documentacion oficial de Bootstrap 4.

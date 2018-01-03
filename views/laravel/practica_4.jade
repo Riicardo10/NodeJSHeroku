@@ -1,0 +1,77 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 PRACTICA 4 - Migraciones y bases de datos.
+			ol
+				li Crear una modelo en Laravel 5  que cuente con los siguientes atributos para posteriormente migrarlos a la base de datos MySQL.
+				table.table.table-striped.table-hover
+						tr
+							th Campo
+							th Tipo
+						tr
+							td id
+							td int
+						tr
+							td nombre
+							td varchar(40)
+						tr
+							td apellido_paterno
+							td varchar(40)
+						tr
+							td apellido_materno
+							td varchar(40)
+						tr
+							td sexo
+							td varchar(1)
+						tr
+							td edad
+							td int
+				li En el CMD, nos posicionamos en el directorio sobre el cual crearemos el proyecto Laravel. (>cd + directorio).
+				li Crear proyecto Laravel con los comandos de Composer.
+					br
+					p.parrafo-centrado
+						i > composer create-project laravel/laravel practica_4 --prefer-dist
+					br
+				li Nos posicionamos sobre el directorio en el que se creó el proyecto (>cd + directorio).
+				li Revisamos que los archivos y carpetas que genera Composer las haya creado correctamente.
+					img(src="/img/186.png" width=800)
+					br
+				li Creamos un modelo en Laravel para posteriormente migrarlo a la base de datos.
+					p.parrafo-centrado
+						i > php artisan make:model PersonasModel -m
+					br
+					p Se crea un archivo .php en el directorio app/ del proyecto, nombrado PersonasModel.php el cual será el archivo que se tomará como modelo para realizar consultas a la base de datos y también se crea la migración la cual es un archivo .php en el directorio database/migrations con el nombre ####_##_##_######_create_personas_models_table.php, en el cual podemos crear la estructura de la tabla y migrarla a la base de datos, para que Laravel interprete esa estructura y la convierta a código SQL.
+				li Abrimos el modelo que creamos (archivo PersonasModel.php).
+					img.practicas(src="/img/206.png")
+					br
+				li Abrimos la migración ####_##_##_######_create_personas_models_table.php
+					img.practicas(src="/img/207.png")
+					br
+					p La función up() se usa para migrar la estructura a la base de datos.
+					p La función down() se usa para realizar un rollback de la base de dato
+				li Modificamos el archivo de la migración para crear la estructura de la tabla que deseamos migrar a la base de datos.
+					img.practicas(src="/img/208.png" width=450)
+					br
+				li Creamos la base de datos en nuestro gestor MySQL.
+					p.parrafo-centrado
+						i > CREATE DATABASE personas_laravel;
+					br
+				li Configuramos la conexión de la base de datos con Laravel + MySQL. Abrimos el archivo .env (se encuentra en raíz) y asignamos los datos de conexión.
+					img.practicas(src="/img/210.png")
+					br
+				li Abrimos el CMD para realizar la migración de la estructura construida anteriormente a la base de datos utilizando un comando de Artisan. (php artisan migrate)
+					p.parrafo-centrado
+						i > php artisan migrate
+					br
+				li Abrimos nuestro MySQL realizamos una consulta para ver las tablas que existen en la base de datos a la que migramos la estructura.
+					p.parrafo-centrado
+						i > show tables;
+					br
+				li Describimos la migración que realizamos (tabla personas_models).
+					p.parrafo-centrado
+						i > desc personas_models;

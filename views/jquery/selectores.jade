@@ -1,0 +1,34 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Selectores.
+			p Los selectores jQuery son una de las partes más importantes de la biblioteca, ya que estos permiten seleccionar y manipular elementos HTML.
+			p Todos los selectores en jQuery comienzan con el signo de dólar y paréntesis: $ (-) y se utilizan para "seleccionar" elementos HTML en función de su nombre, id, clase, tipo, atributos, valores de atributos y mucho más. Se basa en los selectores de CSS existentes.
+			p Puede seleccionar todos los elementos <p> en una página como esta:
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-10
+			table.table.table-striped.table-hover
+				tr
+					th Elemento Selector
+					td 
+						p El selector de elemento jQuery selecciona elementos en función del nombre del elemento. Puede seleccionar todos los elementos <p> en una página como esta: $ ("p"). 
+						p Esta instrucción devuelve una matriz con todos los elementos con etiqueta <p> del documento HTML.
+				tr
+					th Selector de id
+					td 
+						p El selector jQuery #id usa el atributo id de una etiqueta HTML para seleccionar un elemento específico. Un id debe ser único dentro de una página, por lo que debe usar el selector #id cuando desee encontrar un único elemento único.
+						p Para encontrar un elemento con una identificación específica, escriba un carácter hash, seguido de la identificación del elemento HTML: $ ("# prueba")
+						p Esta instrucción devuelve un elemento con el id prueba.
+				tr
+					th Selector de clase
+					td 
+						p El selector de clase jQuery selecciona elementos con una clase específica.
+						p Para encontrar elementos con una clase específica, escriba un carácter de punto, seguido del nombre de la clase:
+						$ (". prueba")
+						p Esta instrucción devuelve una matriz con todos los elementos con clase prueba del documento HTML.

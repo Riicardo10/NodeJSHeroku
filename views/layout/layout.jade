@@ -1,0 +1,48 @@
+doctype html
+html(lang="es")
+	head
+		meta(charset="utf-8")		
+		title= titulo
+		script(type='text/javascript' src='js/sweetalert.min.js')
+		script(type='text/javascript' src='js/funciones_sweetalert.js')
+		script(type='text/javascript' src='js/codemirror.js')
+		link(rel="stylesheet" href="/css/icon.css")
+		link(rel="stylesheet" href="/css/sweetalert.css")
+		link(rel="stylesheet" href="/css/bootstrap.min.css")
+		link(rel="stylesheet" href="/css/estilos-header.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous")
+		link(rel="stylesheet" href="/css/codemirror.css")
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+		link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
+		link(rel='stylesheet', href='/css/Footer-white.css')
+
+	body.cuerpo
+		div.global
+			div.row(style='background:white')
+				div.col-1
+				div.col-11
+					img(src='/img/logo-tec2.jpg' width='92%' height='auto')
+			div.row
+				div.col-12
+					block menu
+			div.row
+				div.col-1
+				div.col-10
+					block contenido
+				div.col-1
+	footer#myFooter
+		div.container
+			div.row
+				div.col-3
+					a.social-icons(href='https://www.google.com/maps/place/Instituto+Tecnológico+de+Chilpancingo/@17.5310885,-99.500371,17z/data=!3m1!4b1!4m5!3m4!1s0x85cbeb81af9c2533:0xeb1d478244dd239d!8m2!3d17.5310885!4d-99.4981823' target="_blank")
+							i.fa.fa-globe
+				div.col-6
+					p 
+						i Av. José Francisco Ruíz Massieu No. 5, Colonia Villa Moderna, C.P. 39090 Chilpancingo, Guerrero. Teléfono: (747) 48 01022, Tel/Fax: 47 2 10 14 www.itchilpancingo.edu.mx, email: itchilpo@hotmail.com 
+				div.col-3
+					a.social-icons(href='https://www.facebook.com/Tecnol%C3%B3gico-de-Chilpancingo-Comunicaci%C3%B3n-131577620223301/?ref=br_rs' target="_blank")
+							i.fa.fa-facebook
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')

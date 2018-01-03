@@ -1,0 +1,131 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 PRACTICA 3 - Vistas con parámetros con el motor de plantillas Jade.
+			h5 Desarrollar una aplicación en Nodejs, que tenga disponibles las siguientes rutas.
+			table.table.table-striped.table-hover
+				tr
+					td / (raíz)
+					td Que retorne una vista creada con el motor de plantillas Jade y que desde el servidor a esa vista se le envíe como parámetro una lista de los días de la semana.
+			ol
+				li En el CMD, nos posicionamos en el directorio sobre el cual crearemos el proyecto Laravel. (>cd + directorio).
+				li Crear el directorio en el equipo donde será creado el proyecto Nodejs.
+				li Nos posicionamos sobre el directorio en el que se creó el proyecto (>cd + directorio).
+				li Importamos el modulo Express para manejar las rutas.
+					p.parrafo-centrado
+						i > npm install express -s
+					br
+				li Importamos el modulo de Jade para crear la vista de la aplicación.
+					p.parrafo-centrado
+						i > npm install jade -s
+					br
+				li Revisamos que los archivos/carpetas de la importación del modulo que genera el NPM Express se hayan creado correctamente.
+					img.practicas(src="/img/240.png")
+					br
+				li Dentro del directorio del proyecto Node.js creamos un archivo *.js (app.js) el cual será el encargado donde se definen las rutas.
+				li Modificamos el archivo app.js, agregando la ruta raíz (/) para que cuando el usuario entre a esa ruta, el servidor le responda con una vista.
+					img.practicas(src="/img/256.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Importamos el módulo de Express y se lo asignamos a la variable nombrada express.
+						tr
+							td 2
+							td Creamos una variable nombrada app y le asignamos el valor que retorna la llamada al modulo express().
+						tr
+							td 3
+							td Establecemos el motor de plantillas (Jade) que ejecutará el servidor.
+						tr
+							td 4
+							td Creamos una variable nombrada puerto y le asignamos un número entero el cual será el puerto donde corra la aplicación. (En nuestro caso correrá por el puerto 3000)
+						tr
+							td 5 → 14
+							td Definicion de las rutas de la aplicación.
+						tr
+							td 6 → 14
+							td 
+								p Definicion de la ruta raíz (/) que se leera por el método HTTP GET, le pasamos dos parámetros req y res.
+								p Req = Peticion del usuario.
+								p Res = Respuesta del servidor. 
+						tr
+							td 7
+							td Creacion de una variable nombrada lista_dias y le asignamos un arreglo con 5 elementos.
+						tr
+							td 8 → 12
+							td 
+								p Creacion de una variable nombrada parametros y le asignamos un objeto JSON con 3 propiedades:
+								p titulo  = cadena de texto “Titulo”
+								p tema   = cadena de texto “Dias de la semana”
+								p días    = arreglo lista_dias
+						tr
+							td 9
+							td Respuesta del servidor. Retornamos la vista nombrada vista/vista.jade pasándole a esa vista Jade el objeto JSON parametros como parámetro.
+						tr
+							td 15
+							td Invocamos la función del servidor listen y le pasamos por parámetro el puerto por el cual correrá el servidor.
+						tr
+							td 16
+							td Imprimimos la notificación de que el servidor se encuentra corriendo en el puerto que definimos.
+				li En la raíz del directorio del proyecto creamos una carpeta llamada views ya que el servidor accederá a esa carpeta para retornar las vistas.
+					img.practicas(src="/img/249.png")
+					br
+				li Dentro de la carpeta views creamos un archivo vista.jade el cual será la vista que retornará el servidor cuando el usuario entre a la ruta raíz (/)
+				li Modificamos el archivo vista.jade.
+					img.practicas(src="/img/250.png")
+					br
+					table.table.table-striped.table-hover
+						tr
+							th Linea(s)
+							th Descripcion
+						tr
+							td 1
+							td Declaración del doctype, tipo de documento que interpretará el navegador web /html.
+						tr
+							td 2
+							td Declaracion del inicio del documento /html
+						tr
+							td 3
+							td Declaración del head, cabecera del documento /html.
+						tr
+							td 4
+							td Título (title) de la página /html, le asignamos el valor del parámetro titulo que se mandó desde el servidor.
+						tr
+							td 5
+							td Inicio del cuerpo del documento /html
+						tr
+							td 6
+							td Encabezado principal del documento tipo h1, le asignamos el valor del parámetro tema que se mandó desde el servidor.
+						tr
+							td 7
+							td Estructura if, se ejecuta si la lista que se mandó desde el servidor tiene elementos.
+						tr
+							td 8
+							td Declaración de una lista no ordenada.
+						tr
+							td 9
+							td Estructura for, itera los elementos de la lista dias que se mandó desde el servidor.
+						tr
+							td 10
+							td Declaración de un elemento de lista li, le asignamos el valor del elemento iterado de la lista días.
+						tr
+							td 11
+							td Estructura else, se ejecuta en caso de que la lista que se mandó desde el servidor no tenga elementos.
+						tr
+							td 12
+							td Encabezado tipo h3, imprime una cadena notificando que la lista que envió el servidor no tiene elementos.
+				li Corremos el servidor haciendo uso de la instrucción > node *.js. (El servidor corre por el puerto 3000 en nuestro localhost).
+					p.parrafo-centrado
+						i > node app.js
+					br
+				li Abrimos el navegador en la ruta raíz (/) para ver la respuesta que nos arroja el servidor cuando entramos a esta ruta.
+					img.practicas(src="/img/260.png")
+					br

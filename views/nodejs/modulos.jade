@@ -1,0 +1,33 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:0%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Modulos.
+			p Un módulo de Node.js es una librería, la cual tiene un conjunto de funciones que son necesarias para que la aplicación funcione como se espere. Al instalar Node.js, se incluyen en la instalación varios modulos que ya son integrados de Node y que se pueden utilizar sin ninguna instalación extra. Para incluir un módulo en una aplicación Node, basta con usar la función 
+				i require(NOMBRE_MODULO) y asignárselo a una variable.
+			p Ejemplo
+			center
+				p
+					i var http = require('http')
+			h5 Módulos propios
+			p Node.js también permite crear módulos propios que resuelvan necesidades comunes. Para crear tu propio módulo e incluirlo en la misma aplicación se debe de crear el modulo, exportarlo e importarlo en el archivo donde se hará uso de el.
+			p Ejemplo
+			p Creando y exportando el módulo (archivo mi_modulo.js).
+			center
+				p
+					i exports.miModulo = function(){ }
+			p Importando el módulo creado anteriormente.
+			center
+				p
+					i var mi_modulo = require('./miModulo')
+			p Con la importación del módulo tendremos acceso desde el archivo donde se importe a las variables y funciones que tenga el modulo importado.
+
+
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+		div.col-10
+			

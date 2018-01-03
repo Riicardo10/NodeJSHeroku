@@ -1,0 +1,80 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Routing.
+			p Basado de la documentación oficial de Laravel. Disponible en https://laravel.com/docs/5.5/
+			p Las rutas más básicas de Laravel simplemente aceptan un URI y un Cierre, proporcionando un método muy simple y expresivo para definir rutas.
+			p 
+				b Todas las rutas de Laravel 5 se definen en el archivo routes/web.php.
+			h4 Métodos disponibles de enrutador
+			p El enrutador le permite registrar rutas que responden a cualquier verbo HTTP:
+	div.row(style="margin-bottom:1%;")
+		div.col-3
+		div.col-6
+			h3 
+			table.table.table-striped.table-hover
+				tr
+					th Verbo
+					th Ruta
+					th Accion
+				tr
+					td GET
+					td /ruta
+					td index
+				tr
+					td GET
+					td /ruta/create
+					td create
+				tr
+					td POST
+					td /ruta
+					td store
+				tr
+					td GET
+					td /ruta/{dato}
+					td show
+				tr
+					td GET
+					td /ruta/{dato}/edit
+					td edit
+				tr
+					td PUT/PATCH
+					td /ruta/{dato}
+					td update
+				tr
+					td DELETE
+					td /ruta/{dato}
+					td delete
+	div.row(style="margin-bottom:1%;")
+		div.col-1
+		div.col-10
+			h4 En resumen, los verbos HTTP aplicados serían los siguientes.
+	div.row(style="margin-bottom:1%;")
+		div.col-3
+		div.col-6
+			table.table.table-striped.table-hover
+				tr
+					th Verbo
+					th Descripcion
+				tr
+					td GET
+					td Para visualizar uno o más registros.
+				tr
+					td POST
+					td Para crear uno o más registros.
+				tr
+					td PUT/PATCH
+					td Para actualizar uno o más registros.
+				tr
+					td DELETE
+					td Para eliminimar uno o más registros.
+
+
+
+
+

@@ -1,0 +1,53 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Eventos.
+			p Con jQuery se pueden responder a eventos en una página HTML.
+			p Los eventos son todas las diferentes acciones que los usuarios realizan dentro de una página web.
+			p Un evento representa el momento preciso en que sucede algo.
+			p Ejemplos de eventos:
+			ul 
+				li Cuando el usuario hace clic en un botón.
+				li Cuando el usuario hace doble clic en un botón.
+				li Cuando el usuario pasa el mouse sobre el contorno un botón.
+				li Cuando el usuario quita el mouse del contorno un botón.
+			h3 Eventos de una página web.
+	div.row(style="margin-bottom:3%;")
+		div.col-3
+		div.col-6
+			table.table.table-striped.table-hover
+				tr
+					th Mouse
+					th Teclado
+					th Formulario
+					th Ventana
+				tr
+					td click
+					td keypress
+					td submit
+					td load
+				tr
+					td dblclick
+					td keydown
+					td change
+					td resize
+					
+				tr
+					td mouseenter
+					td keyup
+					td focus
+					td scroll
+				tr
+					td mouseleave
+					td 
+					td blur
+					td unload
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-10
+			p Comúnmente, se le asigna al documento (página web) el evento ready(), esto para que las acciones se ejecuten una vez que la página web ha sido cargada correctamente en el navegador.

@@ -1,0 +1,40 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Selectores.
+	div.row(style="margin-bottom:3%;")
+		div.col-2
+		div.col-4
+			h3 Selector universal
+			ul
+				li Se indica mediante un asterisco (*).
+				li Su uso consiste en seleccionar a todos los elementos de la página.
+				li Casi no se utiliza, debido a que muy difícilmente se le dan los mismos estilos a todos los elementos de una página.
+		div.col-4
+			h3 Selector de etiqueta
+			ul
+				li Selecciona a los elementos HTML cuya etiqueta coincida con el valor del selector.
+				li Solo se indica el nombre de la etiqueta HTML, sin los corchetes angulares <>.
+				li Se pueden agrupar los selectores para agregar a varios de ellos un mismo estilo, separados por comas.
+	div.row(style="margin-bottom:10%;")
+		div.col-2
+		div.col-4
+			h3 Selector de clase
+			ul
+				li Son los selectores más usados, junto con los selectores de ID.
+				li Se indica mediante un punto (.).
+				li A varios elementos HTML cuya clase sea la misma se aplican los estilos declarados para esa clase.
+				li Disponen de una precisión total para seleccionar elementos.
+				li Se permite reutilizar los mismos estilos para varios elementos.
+		div.col-4
+			h3 Selector de ID
+			ul
+				li Son los selectores más usados, junto con los selectores de Clase.
+				li Se indica mediante una almohadilla (#).
+				li Selecciona un único elemento del documento HTML.
+				li El valor del atributo ID no se puede repetir en la misma página.

@@ -1,0 +1,69 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Arreglos.
+			p El objeto Array permite almacenar varios valores en una sola variable.
+			p La sintaxis para declarar un Array es la siguiente:
+			p var nombre_arreglo = new Array()
+			p Los arreglos en JavaScript al igual que en los demás lenguajes de programación empiezan desde la posición 0.
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+		div.col-10
+			table.table.table-striped.table-hover
+				tr
+					th Propiedades de los arrays
+					th Descripcion
+				tr
+					td Constructor
+					td Devuelve una referencia a la función de array que creó el objeto.
+				tr
+					td Index
+					td Representa el índice basado en 0 de la coincidencia en cadenas.
+				tr
+					td Length
+					td Retorna el numero de elementos que tiene el array.
+				tr
+					td Prototype
+					td Permite agregar propiedades y métodos a un objeto.
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-10
+			table.table.table-striped.table-hover
+				tr
+					th Metodos de los arrays
+					th Descripcion
+				tr
+					td Concat
+					td Une un array con otro array. Retorna un nuevo array con los arrays unidos.
+				tr
+					td Join()
+					td Une todos los elementos del array dentro de una cadena.
+				tr
+					td LastIndexOf
+					td Retorna el ultimo elemento del array.
+				tr
+					td Pop()
+					td Elimina el ultimo elemento del array. Retorna ese elemento.
+				tr
+					td Push()
+					td Agrega uno o mas elementos al final del array. Retorna el nuevo tamaño del array.
+				tr
+					td Reverse()
+					td Ordena del ultimo al primer elemento del array.
+				tr
+					td Shift()
+					td Elimina el primer elemento del array. Retorna ese elemento.
+				tr
+					td Sort()
+					td Ordena los elementos del array.
+				tr
+					td ToString()
+					td Retorna una cadena con los elementos del array.
+				tr
+					td Unshift()
+					td Agrega uno o mas elementos al principio del array. Retorna el nuevo tamaño del array.

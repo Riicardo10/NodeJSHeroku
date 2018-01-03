@@ -1,0 +1,78 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Formularios.
+			p Los formularios son elementos HTML que se utilizan para recopilar información del usuario, haciendo uso de cajas de texto, listas desplegables, botones, entre otros.
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+		div.col-10
+			table.table.table-striped.table-hover
+				tr
+					th Elementos de formulario
+					th Descripcion
+				tr
+					td < input >
+					td Define una entrada de información.
+				tr
+					td < select >
+					td Define una lista desplegable.
+				tr
+					td < textarea >
+					td Define un campo de texto multilínea como entrada de información.			
+				tr
+					td < button >
+					td Define un componente clickable.
+				tr 
+					td < datalist >
+					td Define una lista con opciones predefinidas en un campo de texto.
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-10
+			table.table.table-striped.table-hover
+				tr
+					th Tipos de input
+					th Descripcion
+				tr
+					td text
+					td Define una entrada con un campo de texto de una línea. El contenido es texto.
+				tr
+					td number
+					td Define una entrada con un campo de texto de una línea. El contenido debe ser numérico.
+				tr 
+					td password
+					td Define una entrada con un campo de texto con formato de ‘contraseña’.
+				tr
+					td date
+					td Define una entrada con un campo de texto con formato de ‘fecha’.
+				tr
+					td radio
+					td Permite seleccionar sólo una opción de varias.
+				tr
+					td checkbox
+					td Permite seleccionar cero o más de las opciones disponibles.
+				tr
+					td color
+					td Despliega una paleta o selector de color para poder seleccionar sólo una.
+				tr
+					td email
+					td Define una entrada con un campo de texto con formato de ‘email.
+				tr
+					td range
+					td Controla la entrada de datos en un rango numérico.
+				tr
+					td week
+					td Define una entrada con un campo de texto con formato de ‘fecha de semana’.
+				tr
+					td search
+					td Define una entrada con un campo de texto de una línea. El contenido es texto y el contenido puede ser borrado con el botón integrado en el campo de texto.
+				tr
+					td submit
+					td Define un botón para enviar los datos de un formulario a un manejador.
+				tr
+					td button
+					td Define un componente clickable.

@@ -1,0 +1,65 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:2%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Objeto XMLHttpRequest.
+			p El objeto XMLHttpRequest posee muchas otras propiedades y métodos diferentes a las manejadas por la primera aplicación de AJAX.
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+		div.col-10
+			center
+				img(src="https://www.w3schools.com/xml/ajax.gif" width="500")
+	div.row(style="margin-bottom:10%;")
+		div.col-1
+		div.col-5
+			p Propiedades del objeto XMLHttpRequest
+			table.table.table-striped.table-hover
+				tr
+					th Propiedad
+					th Descripcion
+				tr
+					td readyState
+					td Valor numérico (entero) que almacena el estado de la petición
+				tr
+					td responseText
+					td El contenido de la respuesta del servidor en forma de cadena de texto
+				tr
+					td responseXML	
+					td El contenido de la respuesta del servidor en formato XML. El objeto devuelto se puede procesar como un objeto DOM
+				tr
+					td status
+					td El código de estado HTTP devuelto por el servidor (200 para una respuesta correcta, 404 para "No encontrado", 500 para un error de servidor, etc.)
+				tr
+					td statusText
+					td El código de estado HTTP devuelto por el servidor en forma de cadena de texto: "OK", "Not Found", "Internal Server Error", etc.
+		div.col-5
+			p Valores definidos para la propiedad readyState
+			table.table.table-striped.table-hover
+				tr
+					th Valor
+					th Descripcion
+				tr
+					td 0
+					td No inicializado (objeto creado, pero no se ha invocado el método open)
+				tr
+					td 1
+					td Cargando (objeto creado, pero no se ha invocado el método send)
+				tr
+					td 2
+					td Cargado (se ha invocado el método send, pero el servidor aún no ha respondido)
+				tr
+					td 3
+					td Interactivo (se han recibido algunos datos, aunque no se puede emplear la propiedad responseText)
+				tr
+					td 4
+					td Completo (se han recibido todos los datos de la respuesta del servidor)
+
+
+
+
+
+

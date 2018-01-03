@@ -1,0 +1,11 @@
+extends ../layout/layout
+block contenido
+	article.container
+		div.item.center(style="margin-top:20px;")
+			h1(style="text-align:center")= titulo
+			h4(style="text-align:center")= descripcion
+			h3 
+				a.inicio(href="/") Regresar
+			br
+			pre.error
+				code= error.stack

@@ -1,0 +1,172 @@
+extends ../layout/contenido_editor
+block contenido
+	br
+	div.row(style="margin-bottom:3%;")
+		div.col-1
+			form(action='/')
+				input.btn.botones_editor.bot(type='submit' title='Inicio' value='' style='background:url("/img/icon-index2.png") left center no-repeat; padding:22px;')
+		div.col-10
+			h1 Propiedades CSS.
+	div.row(style="margin-bottom:3%;")
+		div.col-4
+			table.table.table-striped.table-hover
+				tr				
+					td(colspan=2) 
+						b ESTILO PARA FUENTES
+				tr
+					th Propiedad
+					th Descripcion	
+				tr
+					td font-family
+					td Define nombres de fuentes para asignarlas a un texto.
+				tr
+					td font-size
+					td Define un tamaño de fuente para asignarlo a un texto.
+				tr
+					td font-style
+					td Define un estilo de fuente para asignarlo a un texto.
+				tr
+					td font-variant
+					td Define una variante de fuente.
+				tr
+					td font-weight
+					td Define el grosor del tamaño de la fuente.
+		div.col-4
+			table.table.table-striped.table-hover
+				tr				
+					td(colspan=2) 
+						b ESTILO PARA TEXTOS
+				tr
+					th Propiedad
+					th Descripcion			
+				tr
+					td color
+					td Define el color del texto.
+				tr
+					td direction
+					td Define la dirección del texto.
+				tr
+					td letter-spacing
+					td Define el espacio entre caracteres.
+				tr
+					td text-align
+					td Define la alineación del texto.
+				tr
+					td text-indent
+					td Define la sangría del texto.
+				tr
+					td word-spacing
+					td Define el espacio entre las palabras.
+		div.col-4
+			table.table.table-striped.table-hover
+				tr				
+					td(colspan=2) 
+						b ESTILO PARA TAMAÑOS
+				tr
+					td width
+					td Anchura del elemento.
+				tr
+					td min-width
+					td Anchura mínima del elemento.
+				tr
+					td max-width
+					td Anchura máxima del elemento.
+				tr
+					td height 
+					td Altura del elemento.
+				tr
+					td min-height
+					td Altura mínima del elemento.
+				tr
+					td max-height
+					td Altura máxima del elemento.
+		
+	div.row(style="margin-bottom:3%;")
+		div.col-4
+			table.table.table-striped.table-hover
+				tr				
+					td(colspan=2) 
+						b MARGEN EXTERIOR
+				tr
+					td margin
+					td Márgenes exteriores simultáneos del elemento.
+				tr
+					td margin-top
+					td Margen exterior superior del elemento.
+				tr
+					td margin-bottom
+					td Margen exterior inferior del elemento.
+				tr
+					td margin-left
+					td Margen exterior izquierdo del elemento.
+				tr
+					td margin-right
+					td Margen exterior derecho del elemento.
+		div.col-4
+			table.table.table-striped.table-hover
+				tr				
+					td(colspan=2) 
+						b MARGEN INTERIOR
+				tr
+					td padding
+					td Márgenes interiores simultáneos del elemento.
+				tr
+					td padding-top
+					td Margen interior superior del elemento.
+				tr
+					td padding-bottom
+					td Margen interior inferior del elemento.
+				tr
+					td padding-left
+					td Margen interior izquierdo del elemento.
+				tr
+					td padding-right
+					td Margen interior derecho del elemento.
+		div.col-4
+			table.table.table-striped.table-hover
+				tr				
+					td(colspan=2) 
+						b ESTILO PARA FONDOS
+				tr
+					td background-color
+					td Color de fondo de un elemento.
+				tr
+					td background-image
+					td Imagen de fondo.
+				tr
+					td background-position
+					td Posición de la imagen de fondo.
+	div.row(style="margin-bottom:10%;")
+		div.col-4
+		div.col-4
+			table.table.table-striped.table-hover
+				tr				
+					td(colspan=2) 
+						b ESTILO PARA BORDES
+				tr
+					th Propiedad
+					th Descripcion	
+				tr
+					td border
+					td Bordes simultáneos del elemento.
+				tr
+					td border-top
+					td Borde superior del elemento.
+				tr
+					td border-bottom
+					td Borde inferior del elemento.
+				tr
+					td border-left
+					td Borde izquierdo del elemento.
+				tr
+					td border-right
+					td Borde derecho del elemento.
+				tr
+					td border-radius
+					td Esquinas redondeadas del elemento.
+				tr
+					td border-color
+					td Color de borde del elemento.
+				tr
+					td border-style
+					td Estilo de borde del elemento.
